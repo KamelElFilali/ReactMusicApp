@@ -6,13 +6,15 @@ import CardPlayList from './container/card-play-list-container' // importer le c
 import NavBar from './container/nav-bar-container' // importer le navbar container qui lui meme importe le composant Navbar
 
 import 'bootstrap/dist/css/bootstrap.css'
-import './css/style.css'
 import './component/Navbar/navbar.css'
+import './css/style.css'
 
 const rootElement = document.getElementById('app') // recupere l'id app du div se trouvant dans index.html
 ReactDOM.render(
+    <div>
+        <NavBar />
+        <CardPlayList />
+    </div>,
 
-    <CardPlayList />,
-    <NavBar />,
     rootElement
 )

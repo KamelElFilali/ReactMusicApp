@@ -1,16 +1,18 @@
 /* TEST CODE CSS MUSIC APP  */
 
-body {
+/* body {
     background: linear-gradient(250deg, #0675f3, #ec167a);
     background-repeat: no-repeat;
+} */
+
+html, body {
+    width: 100%;
 }
 
 * {
     margin: 0;
     padding: 0;
 }
-
-#div_container {}
 
 .clear {
     clear: both;
@@ -22,7 +24,8 @@ body {
 
 .slidemenu {
     font-family: arial, sans-serif;
-    max-width: 600px;
+    max-width: 1000px;
+    width: 9000px;
     margin: 50px auto;
     overflow: hidden;
 }
@@ -104,4 +107,8 @@ body {
 
 .slidemenu #slide-item-4:checked~.slider .bar {
     margin-left: 75%;
+}
+
+.slidemenu_width {
+    width: 9000px !important;
 }

@@ -17,9 +17,9 @@ body {
     /* align-items: center; */
 }
 
-#app {
+/* #app {
     margin-top: 200px;
-}
+} */
 
 #titreSite {
     text-align: center;
@@ -43,6 +43,7 @@ ul {
     background: white;
     padding: 20px;
     border-radius: 25px;
+    margin: auto;
 }
 
 li {
