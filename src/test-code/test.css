@@ -1,9 +1,16 @@
 /* TEST CODE CSS MUSIC APP  */
 
+body {
+    background: linear-gradient(250deg, #0675f3, #ec167a);
+    background-repeat: no-repeat;
+}
+
 * {
     margin: 0;
     padding: 0;
 }
+
+#div_container {}
 
 .clear {
     clear: both;
