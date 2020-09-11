@@ -1,19 +1,19 @@
 
-// import React, { Component } from 'react' // importer librairie react
+import React, { Component } from 'react' // importer librairie react
 
-// import NavBarComponent from 'component/nav-bar-container' // importer dans le composant du input
+import NavBarComponent from '../component/Navbar/nav-bar-component' // importer le composant navbar
 
-// class NavBar extends Component {
-//     render () {
-//         return (
+class NavBar extends Component {
+    render () {
+        return (
 
-//             <div>
-//                 <NavBarComponent />
+            <div className='navbarContainer'>
+                <NavBarComponent />
 
-//             </div>
+            </div>
 
-//         )
-//     }
-// }
+        )
+    }
+}
 
-// export default NavBar
+export default NavBar

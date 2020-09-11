@@ -1,30 +1,30 @@
 import React, { useState } from 'react'
 
-import {
-    motion,
-    AnimateSharedLayout, AnimatePresence
-}
-    from 'framer-motion'
+import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
 
-import './css/style.css'
+import '../css/style.css'
 
-/**
+const items = [
 
-* This is an example of animating shared layouts in Framer Motion 2.
+    {
+        nom: 'Jazzy',
+        album: 'Fuck men',
+        year: '2020'
+    },
 
-*
+    {
+        nom: 'Maitre Gims',
+        album: 'Bella',
+        year: '2016'
+    },
 
-* The open state of each panel is contained locally to that component. Wrapping
+    {
+        nom: 'Dadju',
+        album: 'Jaloux',
+        year: '2018'
+    }
 
-* them all in the same AnimateSharedLayout component allows them all to animate
-
-* in response to state changes that affect each other's layout.
-
-*
-
-* Try removing AnimateSharedLayout to see how that affects the animation.
-
-*/
+]
 
 export default function App () {
     return (
@@ -100,25 +100,3 @@ function Content ({ object }) {
 
     )
 }
-
-const items = [
-
-    {
-        nom: 'Jazzy',
-        album: 'Fuck men',
-        year: '2020'
-    },
-
-    {
-        nom: 'Maitre Gims',
-        album: 'Bella',
-        year: '2016'
-    },
-
-    {
-        nom: 'Dadju',
-        album: 'Jaloux',
-        year: '2018'
-    }
-
-]
