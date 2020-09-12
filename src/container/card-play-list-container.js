@@ -1,14 +1,14 @@
 
 import React, { Component } from 'react' // importer librairie react
 
-import App from '../component/card-play-list-component' // importer le composant carplayList
+import playList from '../component/card-play-list-component' // importer le composant carplayList
 
-class CardPlayList extends Component {
+class CardPlayListContainer extends Component {
     render () {
         return (
 
             <div>
-                <App />
+                <playList />
 
             </div>
 
@@ -16,4 +16,4 @@ class CardPlayList extends Component {
     }
 }
 
-export default CardPlayList
+export default CardPlayListContainer
