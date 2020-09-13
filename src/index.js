@@ -7,7 +7,7 @@ import * as ReactDOM from 'react-dom'
 
 import App from './container/app' // importer le container app principal de tout les composant
 
-import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './component/Navbar/navbar.css'
 import './css/style.css'
 

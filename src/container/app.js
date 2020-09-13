@@ -2,6 +2,7 @@ import React, { Component } from 'react' // importer librairie react
 
 import NavBarComponent from '../component/Navbar/nav-bar-component' // importer le composant navbar
 import playList from '../component/card-play-list-component' // importer le composant carplayList
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 class App extends Component { // composant container qui est le formualaire 'Contenant'
     render () {

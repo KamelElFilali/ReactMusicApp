@@ -1,45 +1,68 @@
 import React from 'react'
 
 // import Navbar from 'react-bootstrap/Navbar'
-import './navbar.css'
+// import Navbar from 'react-bootstrap/Navbar'
+// import Nav from 'react-bootstrap/Nav'
+// import Button from 'react-bootstrap/Button'
+// import Form from 'react-bootstrap/Form'
+// import FormControl from 'react-bootstrap/FormControl'
+// import * as ReactBootStrap from 'react'
+
 const NavBarComponent = () => (
-    <div>
-        <nav class='slidemenu'>
+    <div className=''>
 
-            {/* <!-- Item 1 --> */}
-            <input type='radio' name='slideItem' id='slide-item-1' class='slide-toggle' checked />
-            <label for='slide-item-1'>
-                <p class='icon'>♬</p><span>Home</span>
-            </label>
-
-            {/* <!-- Item 2 --> */}
-            <input type='radio' name='slideItem' id='slide-item-2' class='slide-toggle' />
-            <label for='slide-item-2'>
-                <p class='icon'>★</p><span>Play List</span>
-            </label>
-
-            {/* <!-- Item 3 --> */}
-            <input type='radio' name='slideItem' id='slide-item-3' class='slide-toggle' />
-            <label for='slide-item-3'>
-                <p class='icon'>✈</p><span>Toute les Albums</span>
-            </label>
-
-            {/* <!-- Item 4 --> */}
-            <input type='radio' name='slideItem' id='slide-item-4' class='slide-toggle' />
-            <label for='slide-item-4'>
-                <p class='icon'>✎</p><span>Contactez nous</span>
-            </label>
-
-            <div class='clear' />
-
-            {/* <!-- Bar --> */}
-            <div class='slider'>
-                <div class='bar' />
+        <nav id='navbarComplete' class='navbar fixed-top navbar navbar-expand-xl   '>
+            <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarTogglerDemo03' aria-controls='navbarTogglerDemo03' aria-expanded='false' aria-label='Toggle navigation'>
+                <span class='navbar-toggler-icon' />
+            </button>
+            <div class='navbar-brand' id='divLogo'>
+                <a id='titreLogo' href='#'>
+                    <p>Liberty Play</p>
+                </a>
+                <a id='lienLogo' class='navbar-brand' href='#'>
+                    <img id='logoSite' src='src/images/icone/logomusic.png' alt='logo du site' />
+                </a>
             </div>
 
+            <div class='collapse navbar-collapse' id='navbarTogglerDemo03'>
+                <ul class='navbar-nav mr-auto mt-2 mt-lg-0'>
+                    <li class='nav-item active'>
+                        <a class='nav-link' href='#'>Accueil <span class='sr-only'>(current)</span></a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='#'>Toutes nos musiques</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link ' href='#'>PlayList</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link ' href='#'>Abonnement</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link ' href='#'>Contactez nous</a>
+                    </li>
+                </ul>
+                <form class='form-inline my-2 my-xl-0'>
+                    <input class='form-control mr-sm-2' type='search' placeholder='Search' aria-label='Search' />
+                    <button class='btn btn-outline-success my-2 my-sm-0' type='submit'>Search</button>
+                </form>
+            </div>
         </nav>
 
     </div>
+    // <Navbar bg='dark' variant='dark'>
+    // <Navbar.Brand href='#home'>Navbar</Navbar.Brand>
+    // <Nav className='mr-auto'>
+    //     <Nav.Link href='#home'>Home</Nav.Link>
+    //     <Nav.Link href='#features'>Features</Nav.Link>
+    //     <Nav.Link href='#pricing'>Pricing</Nav.Link>
+    // </Nav>
+    // <Form inline>
+    //     <FormControl type='text' placeholder='Search' className='mr-sm-2' />
+    //     <Button variant='outline-info'>Search</Button>
+    // </Form>
+    // </Navbar>
+    // <br />
 
 )
 
