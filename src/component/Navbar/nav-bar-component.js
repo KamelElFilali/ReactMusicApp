@@ -8,6 +8,7 @@ import React from 'react'
 // import FormControl from 'react-bootstrap/FormControl'
 // import * as ReactBootStrap from 'react'
 // import '../Navbar/navbar.css'
+// import '../Navbar/animation-nav-bar'
 
 const NavBarComponent = () => (
     <div className=''>
