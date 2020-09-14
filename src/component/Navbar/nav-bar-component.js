@@ -32,16 +32,16 @@ const NavBarComponent = () => (
                         <a class='nav-link' href='#'>Accueil <span class='sr-only'>(current)</span></a>
                     </li>
                     <li class='nav-item'>
-                        <a class='nav-link' href='#'>Nos musiques</a>
+                        <a class='nav-link' href='#'>Musiques</a>
                     </li>
                     <li class='nav-item'>
-                        <a class='nav-link ' href='#'>PlayList</a>
+                        <a class='nav-link ' href='#'>Playlist</a>
                     </li>
                     <li class='nav-item'>
                         <a class='nav-link ' href='#'>Abonnement</a>
                     </li>
                     <li class='nav-item'>
-                        <a class='nav-link ' href='#'>Contactez nous</a>
+                        <a class='nav-link ' href='#'>Contact</a>
                     </li>
                 </ul>
                 <form id='formRecherche' class='form-inline my-2 my-xl-0'>
@@ -52,19 +52,6 @@ const NavBarComponent = () => (
         </nav>
 
     </div>
-    // <Navbar bg='dark' variant='dark'>
-    // <Navbar.Brand href='#home'>Navbar</Navbar.Brand>
-    // <Nav className='mr-auto'>
-    //     <Nav.Link href='#home'>Home</Nav.Link>
-    //     <Nav.Link href='#features'>Features</Nav.Link>
-    //     <Nav.Link href='#pricing'>Pricing</Nav.Link>
-    // </Nav>
-    // <Form inline>
-    //     <FormControl type='text' placeholder='Search' className='mr-sm-2' />
-    //     <Button variant='outline-info'>Search</Button>
-    // </Form>
-    // </Navbar>
-    // <br />
 
 )
 

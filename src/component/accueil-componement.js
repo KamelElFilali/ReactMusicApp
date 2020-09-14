@@ -33,8 +33,8 @@ const AccueilComponent = () => (
             </div>
             <div id='divImgMarketing'>
                 <a id='imgJoinUsLink' class='' href='#'>
-                    {/* <img id='imgJoinUs' src='src/images/pub_accueil.png' alt="s'inscrire" /> */}
-                    <img id='img2JoinUs' src='src/images/image-removebg-preview (3).png' alt="s'inscrire" />
+                    <img id='imgJoinUs' src='src/images/pub_accueil.png' alt="s'inscrire" />
+                    {/* <img id='img2JoinUs' src='src/images/image-removebg-preview (3).png' alt="s'inscrire" /> */}
                 </a>
             </div>
 
