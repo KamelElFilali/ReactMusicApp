@@ -37,6 +37,7 @@
         "webpack-dev-server": "^3.11.0"
     },
     "dependencies": {
+        "express": "^4.17.1",
         "@material-ui/core": "^4.11.0",
         "bootstrap": "^4.5.2",
         "bootstrap-show-password": "^1.2.1",
