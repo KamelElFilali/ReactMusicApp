@@ -12,7 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <meta name="theme-color" content="#000000">
 
     <title>Liberty Play</title>
@@ -24,21 +24,23 @@
 
     </div>
     <div>
-        <p style="font-size: 100px; margin-top:8% ;">
-            This example demonstrates how to shrink a navigation bar when the user starts to scroll the page.
+        <!-- <p style="font-size: 90px; margin-top:8% ;">
+            Lorem ipsum dolor dummy text to enable scrolling, sit amet, consectetur adipiscing elit, sed do eiusmod
 
-            Scroll down this frame to see the effect!
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
 
-            Scroll to the top to remove the effect.
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
 
-            Note: We have also made the navbar responsive, resize the browser window to see the effect.
+            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+
+            culpa qui officia deserunt mollit anim id est laborum.
 
             Lorem ipsum dolor dummy text to enable scrolling, sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
             ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
             velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        </p> -->
 
     </div>
 
@@ -49,12 +51,15 @@
         function scrollFunction() {
             if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
                 document.getElementById("navbarComplete").style.padding = "0px 0px";
-                document.getElementById("navbarComplete").style.fontSize = "25px";
-                document.getElementById("divLogo").style.fontSize = "50px";
+                document.getElementById("navbarComplete").style.fontSize = "2em";
+                document.getElementById("divLogo").style.fontSize = "45px";
             } else {
-                document.getElementById("navbarComplete").style.padding = "50px 0px";
-                document.getElementById("navbarComplete").style.fontSize = "32px";
-                document.getElementById("divLogo").style.fontSize = "55px";
+                document.getElementById("navbarComplete").style.padding = "30px 0px";
+                document.getElementById("navbarComplete").style.fontSize = "2.5em";
+                document.getElementById("divLogo").style.fontSize = "48px";
+
+                // document.getElementById("formRecherche").style.marginLeft = "200px";
+
 
             }
         }

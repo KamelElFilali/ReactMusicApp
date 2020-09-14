@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
+import { Button } from '@material-ui/core'
 
 // import FormContainer from 'container/form-container'
 // import CardPlayListContainer from './container/card-play-list-container' // importer le cardPlayLister container qui lui meme importe le composant carPlayLsit
@@ -9,7 +10,8 @@ import App from './container/app' // importer le container app principal de tout
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './component/Navbar/navbar.css'
-import './css/style.css'
+// import './css/style.css'
+import './css/accueil.css'
 
 const rootElement = document.getElementById('app') // recupere l'id app du div se trouvant dans index.html
 ReactDOM.render(

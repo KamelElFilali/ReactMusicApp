@@ -26,7 +26,7 @@ const items = [
 
 ]
 
-export default function playList () {
+export default function PlayList () {
     return (
 
         <AnimateSharedLayout>

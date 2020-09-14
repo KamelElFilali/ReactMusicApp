@@ -1,107 +1,231 @@
-/* TEST CODE CSS MUSIC APP  */
-
 body {
-    background: linear-gradient(250deg, #0675f3, #ec167a);
-    background-repeat: no-repeat;
-}
-
-* {
-    margin: 0;
+    font-family: 'Roboto', sans-serif;
     padding: 0;
+    margin: 0;
 }
 
-#div_container {}
-
-.clear {
-    clear: both;
+small {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.4);
 }
 
-.slide-toggle {
-    display: none;
-}
-
-.slidemenu {
-    font-family: arial, sans-serif;
-    max-width: 600px;
-    margin: 50px auto;
-    overflow: hidden;
-}
-
-.slidemenu label {
-    width: 25%;
+h1 {
     text-align: center;
-    display: block;
-    float: left;
-    color: #333;
-    opacity: 0.2;
+    padding: 50px 0;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -1px;
+    color: inherit;
+    font-size: 40px;
 }
 
-.slidemenu label:hover {
-    cursor: pointer;
-    color: #666;
-}
-
-.slidemenu label span {
-    display: block;
-    padding: 10px;
-}
-
-.slidemenu label .icon {
-    font-size: 20px;
-    border: solid 2px #333;
+h2 {
     text-align: center;
-    height: 50px;
-    width: 50px;
-    display: block;
+    font-size: 30px;
+    margin: 0;
+    font-weight: 300;
+    color: inherit;
+    padding: 50px;
+}
+
+.center {
+    text-align: center;
+}
+
+section {
+    height: 100vh;
+}
+
+/* NAVIGATION */
+
+nav {
+    width: 80%;
     margin: 0 auto;
-    line-height: 50px;
-    border-radius: 50%;
+    background: #fff;
+    padding: 50px 0;
+    box-shadow: 0px 5px 0px #dedede;
 }
 
-/*Bar Style*/
+nav ul {
+    list-style: none;
+    text-align: center;
+}
 
-.slider {
-    width: 100%;
-    height: 5px;
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
     display: block;
-    background: #ccc;
-    margin-top: 10px;
-    border-radius: 5px;
+    padding: 15px;
+    text-decoration: none;
+    color: #aaa;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 10px;
 }
 
-.slider .bar {
-    width: 25%;
-    height: 5px;
-    background: #333;
-    border-radius: 5px;
+nav ul li a, nav ul li a:after, nav ul li a:before {
+    transition: all .5s;
 }
 
-/*Animations*/
-
-.slidemenu label, .slider .bar {
-    transition: all 500ms ease-in-out;
-    -webkit-transition: all 500ms ease-in-out;
-    -moz-transition: all 500ms ease-in-out;
+nav ul li a:hover {
+    color: #555;
 }
 
-/*Toggle*/
+/* stroke */
 
-.slidemenu .slide-toggle:checked+label {
+nav.stroke ul li a, nav.fill ul li a {
+    position: relative;
+}
+
+nav.stroke ul li a:after, nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #aaa;
+    height: 1px;
+}
+
+nav.stroke ul li a:hover:after {
+    width: 100%;
+}
+
+nav.fill ul li a {
+    transition: all 2s;
+}
+
+nav.fill ul li a:after {
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 0;
+}
+
+nav.fill ul li a:hover {
+    color: #fff;
+    z-index: 1;
+}
+
+nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
     opacity: 1;
 }
 
-.slidemenu #slide-item-1:checked~.slider .bar {
-    margin-left: 0;
+/* Circle */
+
+nav.circle ul li a {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
-.slidemenu #slide-item-2:checked~.slider .bar {
-    margin-left: 25%;
+nav.circle ul li a:after {
+    display: block;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '.';
+    color: transparent;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: transparent;
 }
 
-.slidemenu #slide-item-3:checked~.slider .bar {
-    margin-left: 50%;
+nav.circle ul li a:hover:after {
+    -webkit-animation: circle 1.5s ease-in forwards;
 }
 
-.slidemenu #slide-item-4:checked~.slider .bar {
-    margin-left: 75%;
+/* SHIFT */
+
+nav.shift ul li a {
+    position: relative;
+    z-index: 1;
+}
+
+nav.shift ul li a:hover {
+    color: #91640F;
+}
+
+nav.shift ul li a:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 1px;
+    content: '.';
+    color: transparent;
+    background: #F1C40F;
+    visibility: none;
+    opacity: 0;
+    z-index: -1;
+}
+
+nav.shift ul li a:hover:after {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+
+/* Keyframes */
+
+@-webkit-keyframes fill {
+    0% {
+        width: 0%;
+        height: 1px;
+    }
+    50% {
+        width: 100%;
+        height: 1px;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        background: #333;
+    }
+}
+
+/* Keyframes */
+
+@-webkit-keyframes circle {
+    0% {
+        width: 1px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        height: 1px;
+        z-index: -1;
+        background: #eee;
+        border-radius: 100%;
+    }
+    100% {
+        background: #aaa;
+        height: 5000%;
+        width: 5000%;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 0;
+    }
 }
