@@ -30,11 +30,6 @@ class App extends Component { // composant container qui est le formualaire 'Con
     }
 
     render () {
-        // const playlist = [{
-
-        //     handleOnClick: this.handlePlayListOnClick
-        // }]
-
         const BUTTONS = [{
 
             handleOnClick: this.handlePlayListOnClick
