@@ -1,21 +1,9 @@
 import React from 'react'
 import { Button } from '@material-ui/core'
 
-// import Navbar from 'react-bootstrap/Navbar'
-// import Navbar from 'react-bootstrap/Navbar'
-// import Nav from 'react-bootstrap/Nav'
-// import Button from 'react-bootstrap/Button'
-// import Form from 'react-bootstrap/Form'
-// import FormControl from 'react-bootstrap/FormControl'
-// import * as ReactBootStrap from 'react'
-
 const AccueilComponent = () => (
     <div className=''>
 
-        <div>
-            {/* <h1 id='titreSite'>Kamel</h1> */}
-
-        </div>
         <div id='divJoinUs'>
             <div id='divTextMarketing'>
                 <div id='divText1' href='#'>

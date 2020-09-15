@@ -1,15 +1,5 @@
 import React from 'react'
 
-// import Navbar from 'react-bootstrap/Navbar'
-// import Navbar from 'react-bootstrap/Navbar'
-// import Nav from 'react-bootstrap/Nav'
-// import Button from 'react-bootstrap/Button'
-// import Form from 'react-bootstrap/Form'
-// import FormControl from 'react-bootstrap/FormControl'
-// import * as ReactBootStrap from 'react'
-// import '../Navbar/navbar.css'
-// import '../Navbar/animation-nav-bar'
-
 const NavBarComponent = ({ buttons }) => (
 
     <div className=''>

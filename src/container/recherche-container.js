@@ -17,7 +17,7 @@ class RechercheContainer extends Component {
 
     componentDidMount () {
         fetch('http://localhost:8080/recherche', { method: 'GET' })
-        // aulieu de fetch sur le fichier json on fetch sur l'url avec le Array en parametres '/users'
+
             .then(response => response.json())
             .then(response => {
                 this.setState({ users: response })
