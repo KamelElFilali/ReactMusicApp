@@ -29,14 +29,11 @@ const NavBarComponent = ({ buttons }) => (
                         <a class='nav-link ' href=''>Playlist</a>
                     </li>
                     <li onClick={buttons} class='nav-item'>
-                        <a class='nav-link ' href=''>Abonnement</a>
-                    </li>
-                    <li onClick={buttons} class='nav-item'>
                         <a class='nav-link ' href=''>Contact</a>
                     </li>
                 </ul>
                 <form id='formRecherche' class='form-inline my-2 my-xl-0'>
-                    <input id='barreRecherche' class='form-control mr-sm-2' type='search' placeholder='artiste,album,titre...' aria-label='Search' />
+                    <input id='barreRecherche' class='form-control mr-sm-2' type='search' placeholder='artist,album,titre...' aria-label='Search' />
                     <button onClick={buttons.handleOnClick} id='btnRecherche' class='btn btn-outline-success my-2 my-sm-0' type='submit'>Rechercher</button>
                 </form>
             </div>

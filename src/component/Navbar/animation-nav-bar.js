@@ -7,11 +7,13 @@ function scrollFunction () {
         document.getElementById('navbarComplete').style.padding = '0px 0px'
         document.getElementById('navbarComplete').style.fontSize = '2em'
         document.getElementById('divLogo').style.fontSize = '45px'
+        document.getElementById('barreRecherche').style.fontSize = '2rem'
+        document.getElementById('btnRecherche').style.fontSize = '2rem'
     } else {
         document.getElementById('navbarComplete').style.padding = '30px 0px'
         document.getElementById('navbarComplete').style.fontSize = '2.5em'
         document.getElementById('divLogo').style.fontSize = '48px'
-
-        // document.getElementById("formRecherche").style.marginLeft = "200px";
+        document.getElementById('barreRecherche').style.fontSize = '2.5rem'
+        document.getElementById('btnRecherche').style.fontSize = '2.5rem'
     }
 }
