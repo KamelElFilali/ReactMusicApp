@@ -30,7 +30,7 @@ export default function PlayList () {
     return (
 
         <AnimateSharedLayout>
-            <h1 id='titreSite'>Ma PlayList</h1>
+            <h1 style='font-size="80px"' id='titreSite'>PLAY LIST</h1>
             <motion.ul
                 layout initial={{ borderRadius: 25 }}
             >

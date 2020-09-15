@@ -10,7 +10,8 @@ import React from 'react'
 // import '../Navbar/navbar.css'
 // import '../Navbar/animation-nav-bar'
 
-const NavBarComponent = () => (
+const NavBarComponent = ({ buttons }) => (
+
     <div className=''>
 
         <nav id='navbarComplete' class='navbar fixed-top navbar navbar-expand-xl   '>
@@ -28,25 +29,25 @@ const NavBarComponent = () => (
 
             <div class='collapse navbar-collapse' id='navbarTogglerDemo03'>
                 <ul id='listNavbar' class='navbar-nav mr-auto mt-2 mt-sm-0'>
-                    <li class='nav-item active'>
-                        <a class='nav-link' href='#'>Accueil <span class='sr-only'>(current)</span></a>
+                    <li onClick={buttons} class='nav-item active'>
+                        <a class='nav-link' href=''>Accueil <span class='sr-only'>(current)</span></a>
                     </li>
-                    <li class='nav-item'>
-                        <a class='nav-link' href='#'>Musiques</a>
+                    <li onClick={buttons} class='nav-item'>
+                        <a class='nav-link' href=''>Musiques</a>
                     </li>
-                    <li class='nav-item'>
-                        <a class='nav-link ' href='#'>Playlist</a>
+                    <li onClick={buttons} class='nav-item'>
+                        <a class='nav-link ' href=''>Playlist</a>
                     </li>
-                    <li class='nav-item'>
-                        <a class='nav-link ' href='#'>Abonnement</a>
+                    <li onClick={buttons} class='nav-item'>
+                        <a class='nav-link ' href=''>Abonnement</a>
                     </li>
-                    <li class='nav-item'>
-                        <a class='nav-link ' href='#'>Contact</a>
+                    <li onClick={buttons} class='nav-item'>
+                        <a class='nav-link ' href=''>Contact</a>
                     </li>
                 </ul>
                 <form id='formRecherche' class='form-inline my-2 my-xl-0'>
                     <input id='barreRecherche' class='form-control mr-sm-2' type='search' placeholder='artiste,album,titre...' aria-label='Search' />
-                    <button id='btnRecherche' class='btn btn-outline-success my-2 my-sm-0' type='submit'>Rechercher</button>
+                    <button onClick={buttons.handleOnClick} id='btnRecherche' class='btn btn-outline-success my-2 my-sm-0' type='submit'>Rechercher</button>
                 </form>
             </div>
         </nav>

@@ -6,24 +6,50 @@ import PlayList from '../component/card-play-list-component' // importer le comp
 import AccueilComponent from '../component/accueil-componement'
 import Accueil from '../container/accueil-container'
 import NavBar from '../container/nav-bar-container'
+import RechercherContainer from '../container/recherche-container'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 class App extends Component { // composant container qui est le formualaire 'Contenant'
+    constructor (props) {
+        super(props)
+
+        this.state = {
+            isPlayListOpen: false
+        }
+
+        this.handlePlayListOnClick = this.handlePlayListOnClick.bind(this)
+        this.handleAccueilOnClick = this.handleAccueilOnClick.bind(this)
+    }
+
+    handlePlayListOnClick () {
+        this.setState({ isPlayListOpen: true })
+    }
+
+    handleAccueilOnClick () {
+        this.setState({ isPlayListOpen: false })
+    }
+
     render () {
+        // const playlist = [{
+
+        //     handleOnClick: this.handlePlayListOnClick
+        // }]
+
+        const BUTTONS = [{
+
+            handleOnClick: this.handlePlayListOnClick
+        }]
+
         return (
             <div>
                 <div>
 
-                    <NavBarComponent />
+                    <NavBarComponent buttons={BUTTONS} />
 
                 </div>
                 <div>
-                    <AccueilComponent />
 
-                </div>
-
-                <div>
-                    {/* <PlayList /> */}
+                    {this.state.isPlayListOpen ? <RechercherContainer /> : <AccueilComponent />}
 
                 </div>
 

@@ -20,7 +20,7 @@ const CONTENT_TYPE_JSON = 'application/json'
 
 const USERS = []
 
-app.get('/users', function (request, response) {
+app.get('/recherche', function (request, response) {
     response.writeHead(HTTP_OK, { 'Content-Type': CONTENT_TYPE_JSON })
     response.end(JSON.stringify(USERS, null, 4))
 })
