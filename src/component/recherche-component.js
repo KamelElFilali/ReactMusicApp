@@ -4,7 +4,7 @@ const RechercheComponent = () => (
 
     <div className=''>
 
-        <h1>RECHERCHEEE</h1>
+        <h1>RECHERCHE</h1>
 
     </div>
 
