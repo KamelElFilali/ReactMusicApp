@@ -13,7 +13,7 @@ const NavBarComponent = ({ buttons }) => (
                     <p>Liberty Play</p>
                 </a>
                 <a id='lienLogo' class='navbar-brand' href='#'>
-                    <img id='logoSite' src='src/images/icone/logomusic.png' alt='logo du site' />
+                    <img id='logoSite' src='icone/logomusic.png' alt='logo du site' />
                 </a>
             </div>
 
