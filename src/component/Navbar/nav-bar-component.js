@@ -20,7 +20,7 @@ const NavBarComponent = ({ buttons }) => (
             <div class='collapse navbar-collapse' id='navbarTogglerDemo03'>
                 <ul id='listNavbar' class='navbar-nav mr-auto mt-2 mt-sm-0'>
                     <li class='nav-item active'>
-                        <a class='nav-link' href=''>Accueilss <span class='sr-only'>(current)</span></a>
+                        <a class='nav-link' href=''>Accueil <span class='sr-only'>(current)</span></a>
                     </li>
                     <li class='nav-item'>
                         <a class='nav-link' href=''>Musiques</a>
