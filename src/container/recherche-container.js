@@ -32,7 +32,6 @@ class RechercheContainer extends Component {
         return (
             <div>
                 <RechercheComponent />
-
             </div>
         )
     }
