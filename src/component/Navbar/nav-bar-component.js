@@ -28,6 +28,16 @@ const NavBarComponent = ({ buttons }) => (
                     <li class='nav-item'>
                         <a class='nav-link ' href=''>Playlist</a>
                     </li>
+                    <div id='divDropDown' class='dropdown'>
+                        <button id='btnDropDown' class='btn btn-secondary dropdown-toggle' type='button' id='dropdownMenu2' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+                            Playlist
+                        </button>
+                        <div id='divListDropDown' class='dropdown-menu' aria-labelledby='dropdownMenu2'>
+                            <button class='dropdown-item' type='button'>Action</button>
+                            <button class='dropdown-item' type='button'>Another action</button>
+                            <button class='dropdown-item' type='button'>Something else here</button>
+                        </div>
+                    </div>
                     <li class='nav-item'>
                         <a class='nav-link ' href=''>Contact</a>
                     </li>
