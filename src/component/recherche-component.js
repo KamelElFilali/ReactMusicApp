@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RechercheComponent = () => (
+const RechercheComponent = ({ onClick }) => (
 
     <div className=''>
 
