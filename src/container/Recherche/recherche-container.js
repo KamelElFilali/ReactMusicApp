@@ -34,11 +34,6 @@ class RechercheContainer extends Component {
     render () {
         return (
             <div>
-<<<<<<< HEAD:src/container/recherche-container.js
-                <RechercheComponent onClick={this.handleClick} users={this.state.users} />
-=======
->>>>>>> master:src/container/Recherche/recherche-container.js
-
                 <ResultatRechercheContainer />
             </div>
         )

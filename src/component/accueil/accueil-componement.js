@@ -28,7 +28,6 @@ const AccueilComponent = () => (
 
         </div>
 
-<<<<<<< HEAD:src/component/accueil-componement.js
         {/* <div id='divJoinUs'>
             <div id='divTextMarketing'>
                 <div id='divText1' href='#'>
@@ -52,8 +51,6 @@ const AccueilComponent = () => (
             </div>
         </div> */}
 
-=======
->>>>>>> master:src/component/accueil/accueil-componement.js
         <div id='divImgDecouvrir'>
             <a id='imgJoinUsLink' className='' href='#'>
 
