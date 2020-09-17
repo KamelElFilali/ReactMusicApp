@@ -32,10 +32,26 @@ const NavBarComponent = ({ onSubmit }) => (
                         <a class='nav-link ' href=''>Contact</a>
                     </li>
                 </ul>
+                <div id='divSelectPlaylist'>
+                    <div class='input-group'>
+                        <select class='custom-select' id='inputGroupSelect04'>
+                            <option selected>choisir playlist</option>
+                            <option value='1'>genre1</option>
+                            <option value='2'>genre2</option>
+                            <option value='3'>genre3</option>
+                        </select>
+                        <div class='input-group-append'>
+                            <button id='btnPlaylist' class='btn btn-outline-secondary' type='button'>Afficher</button>
+                        </div>
+                    </div>
+
+                </div>
+
                 <form onSubmit={onSubmit} id='formRecherche' class='form-inline my-2 my-xl-0'>
                     <input id='barreRecherche' class='form-control mr-sm-2' type='search' placeholder='artist,album,titre...' aria-label='Search' />
                     <button id='btnRecherche' class='btn btn-outline-success my-2 my-sm-0' type='submit'>Rechercher</button>
                 </form>
+
             </div>
         </nav>
 
