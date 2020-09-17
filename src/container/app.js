@@ -6,7 +6,10 @@ import PlayList from '../component/card-play-list-component' // importer le comp
 import AccueilComponent from '../component/accueil-componement'
 import Accueil from '../container/accueil-container'
 import NavBar from '../container/nav-bar-container'
-import RechercherContainer from '../container/recherche-container'
+import DetailsRechercheContainer from '../container/recherche-container'
+import SelectPlayListContainer from '../container/recherche-container'
+import PlayVideoContainer from '../container/Playlist/play-video-container'
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 class App extends Component { // composant container qui est le formualaire 'Contenant'

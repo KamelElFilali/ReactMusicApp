@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 
 import ResultatRechercheContainer from '../../container/Recherche/resultat-recherche-container'
 import DetailsRechercheContainer from '../../container/Recherche/details-recherche-container'
+import DetailsRechercheContainer from '../../container/Recherche/details-recherche-container'
 
-class RechercheContainer extends Component {
+
+class DetailsRechercheContainer extends Component {
     constructor () {
         super()
 
