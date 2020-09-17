@@ -11,6 +11,8 @@ import PlayListContainer from './playlist/play-list-container'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+import ResultatRechercheContainer from '../container/Recherche/resultat-recherche-container'
+
 class App extends Component { // composant container qui est le formualaire 'Contenant'
     constructor (props) {
         super(props)
@@ -38,7 +40,8 @@ class App extends Component { // composant container qui est le formualaire 'Con
     }
 
     handleAlbumOnClick () {
-
+        const masterId = new ResultatRechercheContainer()
+        return masterId.handleClicks()
     }
 
     handleSelectionOnClick () {

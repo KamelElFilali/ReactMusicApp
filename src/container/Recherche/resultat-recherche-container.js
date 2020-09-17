@@ -7,12 +7,16 @@ class ResultatRechercheContainer extends Component {
         super(props)
 
         this.state = {
-            masterIdAlbum: [],
-            titreAlbum: [],
-            imageUrAlbum: []
+            result: []
         }
 
-        this.handleClick = this.handleClick.bind(this)
+        // this.handleClick = this.handleClick.bind(this)
+    }
+
+    handleClicks (event) {
+        console.log(event.currentTarget.getAttribute('data-key'), ' <---> ', event.currentTarget)
+        return event.currentTarget.getAttribute('data-key')
+        // console.log(event.currentTarget.getAttribute('data-key'), ' <---> ', event.currentTarget)
     }
 
     componentDidMount () {
@@ -20,22 +24,14 @@ class ResultatRechercheContainer extends Component {
             .then(response => response.json())
             .then(responseJson => {
                 const result = responseJson.results
-                result.map((item, index) => {
-                    this.state.imageUrAlbum[index] = item.thumb
-                    this.state.titreAlbum[index] = item.title
-                    this.state.masterIdAlbum[index] = item.master_id
-                })
+                this.state.result = result
             })
-    }
-
-    handleClick (event) {
-        console.log(event.target.getAttribute('data-key'), ' 1- ', event.target.value)
     }
 
     render () {
         return (
             <div>
-                <ResultatRechercheComponent onClick={this.handleClick} url={this.state.imageUrAlbum[index]} textP={} masterId={this.state.masterIdAlbum[index]} />
+                {this.state.result.map((item, index) => <ResultatRechercheComponent key={index} textP={item.title} url={item.thumb} masterId={item.master_id} />)}
             </div>
         )
     }
