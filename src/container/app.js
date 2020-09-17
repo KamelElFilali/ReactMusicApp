@@ -16,24 +16,21 @@ class App extends Component { // composant container qui est le formualaire 'Con
         super(props)
 
         this.state = {
-            isPlayListOpen: false
+            container: 'accueil',
+            rechercheValeur: ''
         }
 
         this.handleRechercheOnClick = this.handleRechercheOnClick.bind(this)
-        this.handlePlayListOnClick = this.handlePlayListOnClick.bind(this)
+        // this.handlePlayListOnClick = this.handlePlayListOnClick.bind(this)
         this.handleAccueilOnClick = this.handleAccueilOnClick.bind(this)
         this.handleAlbumOnClick = this.handleAlbumOnClick.bind(this)
         this.handleAjoutTrackOnClick = this.handleAjoutTrackOnClick.bind(this)
     }
 
-    handlePlayListOnClick () {
-        this.setState({ isPlayListOpen: true })
-    }
-
     handleRechercheOnClick (event) {
         event.preventDefault()
         const rechercheInput = document.getElementById('barreRecherche')
-        console.log(rechercheInput.value)
+        this.setState({ container: 'recherche', rechercheValeur: rechercheInput })
     }
 
     handleAccueilOnClick () {
@@ -54,9 +51,23 @@ class App extends Component { // composant container qui est le formualaire 'Con
 
     render () {
         const BUTTONS = [{
-
             handleOnClick: this.handlePlayListOnClick
         }]
+        let nextContainer = ''
+
+        switch (this.state.container) {
+        case 'accueil':
+            nextContainer = <AccueilContainer />
+            break
+        case 'recherche':
+            nextContainer = <RechercheContainer />
+            break
+        case 'playlist':
+            nextContainer = <PlayListContainer />
+            break
+        default:
+            nextContainer = <AccueilContainer />
+        }
 
         return (
             <div>
@@ -66,9 +77,7 @@ class App extends Component { // composant container qui est le formualaire 'Con
 
                 </div>
                 <div>
-
-                    {this.state.isPlayListOpen ? <RechercheContainer /> : <AccueilContainer />}
-
+                    {nextContainer}
                 </div>
 
             </div>
