@@ -1,13 +1,13 @@
 import React, { Component } from 'react' // importer librairie react
 import { Button } from '@material-ui/core'
 
-import NavBarComponent from '../component/Navbar/nav-bar-component' // importer le composant navbar
-import PlayList from '../component/card-play-list-component' // importer le composant carplayList
-import AccueilComponent from '../component/accueil-componement'
-import Accueil from '../container/accueil-container'
-import NavBar from '../container/nav-bar-container'
-import DetailsRechercheContainer from './Recherche/recherche-container'
-import PlayListContainer from './Playlist/play-list-container'
+import NavBarContainer from './accueil/nav-bar-container' // importer le composant navbar
+
+import AccueilContainer from './accueil/accueil-container'
+
+import RechercheContainer from './recherche/recherche-container'
+
+import PlayListContainer from './playlist/play-list-container'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -41,12 +41,12 @@ class App extends Component { // composant container qui est le formualaire 'Con
             <div>
                 <div>
 
-                    <NavBarComponent buttons={BUTTONS} />
+                    <NavBarContainer buttons={BUTTONS} />
 
                 </div>
                 <div>
 
-                    {this.state.isPlayListOpen ? <RechercherContainer /> : <AccueilComponent />}
+                    {this.state.isPlayListOpen ? <RechercheContainer /> : <AccueilContainer />}
 
                 </div>
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import BoutonNavigationComponent from '../../component/Playlist/boutons-navigation-component'
+import BoutonNavigationComponent from '../../component/playlist/boutons-navigation-component'
 
 class BoutonNavigationContainer extends Component {
     constructor (props) {

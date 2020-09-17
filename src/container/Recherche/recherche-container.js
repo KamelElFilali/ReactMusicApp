@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 
-import ResultatRechercheContainer from '../../container/Recherche/resultat-recherche-container'
-import DetailsRechercheContainer from '../../container/Recherche/details-recherche-container'
-import DetailsRechercheContainer from '../../container/Recherche/details-recherche-container'
+import ResultatRechercheContainer from './resultat-recherche-container'
+import DetailsRechercheContainer from './details-recherche-container'
 
-
-class DetailsRechercheContainer extends Component {
+class RechercheContainer extends Component {
     constructor () {
         super()
 

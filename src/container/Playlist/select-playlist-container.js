@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import SelectPlayListComponent from '../../component/Playlist/select-playlist-component'
+import SelectPlayListComponent from '../../component/playlist/select-playlist-component'
 
 class SelectPlayListContainer extends Component {
     constructor (props) {

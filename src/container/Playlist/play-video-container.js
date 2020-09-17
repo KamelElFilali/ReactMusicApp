@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import PlayVideoComponent from '../../component/Playlist/play-video-component'
+import PlayVideoComponent from '../../component/playlist/play-video-component'
 
 class PlayVideoContainer extends Component {
     constructor (props) {
