@@ -40,8 +40,7 @@ class App extends Component { // composant container qui est le formualaire 'Con
     }
 
     handleAlbumOnClick () {
-        const masterId = new ResultatRechercheContainer()
-        return masterId.handleClicks()
+
     }
 
     handleSelectionOnClick () {

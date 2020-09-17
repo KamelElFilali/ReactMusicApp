@@ -10,10 +10,10 @@ class ResultatRechercheContainer extends Component {
             result: []
         }
 
-        // this.handleClick = this.handleClick.bind(this)
+        this.handleClick = this.handleClick.bind(this)
     }
 
-    handleClicks (event) {
+    handleClick (event) {
         console.log(event.currentTarget.getAttribute('data-key'), ' <---> ', event.currentTarget)
         return event.currentTarget.getAttribute('data-key')
         // console.log(event.currentTarget.getAttribute('data-key'), ' <---> ', event.currentTarget)
@@ -31,7 +31,7 @@ class ResultatRechercheContainer extends Component {
     render () {
         return (
             <div>
-                {this.state.result.map((item, index) => <ResultatRechercheComponent key={index} textP={item.title} url={item.thumb} masterId={item.master_id} />)}
+                {this.state.result.map((item, index) => <ResultatRechercheComponent onClick={this.handleClick} key={index} textP={item.title} url={item.thumb} masterId={item.master_id} />)}
             </div>
         )
     }
