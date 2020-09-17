@@ -4,8 +4,8 @@ import ResultatRechercheContainer from './resultat-recherche-container'
 import DetailsRechercheContainer from './details-recherche-container'
 
 class RechercheContainer extends Component {
-    constructor () {
-        super()
+    constructor (props) {
+        super(props)
 
         this.state = {
 
