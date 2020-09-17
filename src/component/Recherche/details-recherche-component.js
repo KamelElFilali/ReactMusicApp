@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RechercheComponent = () => (
+const DetailsRechercheComponent = () => (
     <div className=''>
 
         <h1>RECHERCHE</h1>
@@ -9,4 +9,4 @@ const RechercheComponent = () => (
 
 )
 
-export default RechercheComponent
+export default DetailsRechercheComponent

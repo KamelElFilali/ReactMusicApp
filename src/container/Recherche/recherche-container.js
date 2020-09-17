@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-// import RechercheComponent from '../component/recherche-component'
-import ResultatRechercheContainer from '../container/resultat-recherche-container'
+import ResultatRechercheContainer from './resultat-recherche-container'
+import DetailsRechercheContainer from './details-recherche-container'
 
 class RechercheContainer extends Component {
     constructor (props) {

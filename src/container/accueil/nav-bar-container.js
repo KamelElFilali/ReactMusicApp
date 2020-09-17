@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react' // importer librairie react
 
-import NavBarComponent from '../component/Navbar/nav-bar-component' // importer le composant navbar
+import NavBarComponent from '../../component/accueil/nav-bar-component' // importer le composant navbar
 // import '../component/Navbar/navbar.css'
-class NavBar extends Component {
+class NavBarContainer extends Component {
     render () {
         return (
 
@@ -16,4 +16,4 @@ class NavBar extends Component {
     }
 }
 
-export default NavBar
+export default NavBarContainer

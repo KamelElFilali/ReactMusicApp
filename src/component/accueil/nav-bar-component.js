@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NavBarComponent = ({ buttons }) => (
+const NavBarComponent = () => (
 
     <div className=''>
 
@@ -29,22 +29,23 @@ const NavBarComponent = ({ buttons }) => (
                         <a class='nav-link ' href=''>Playlist</a>
                     </li>
                     <div id='divDropDown' class='dropdown'>
-                        <button id='btnDropDown' class='btn btn-secondary dropdown-toggle' type='button' id='dropdownMenu2' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+                        <button id='btnDropDown' class='btn btn-secondary dropdown-toggle' type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
                             Playlist
                         </button>
                         <div id='divListDropDown' class='dropdown-menu' aria-labelledby='dropdownMenu2'>
-                            <button class='dropdown-item' type='button'>Action</button>
-                            <button class='dropdown-item' type='button'>Another action</button>
-                            <button class='dropdown-item' type='button'>Something else here</button>
+                            <button class='dropdown-item' type='button'>Select 1</button>
+                            <button class='dropdown-item' type='button'>Select 1</button>
+                            <button class='dropdown-item' type='button'>Select 1</button>
                         </div>
                     </div>
+
                     <li class='nav-item'>
                         <a class='nav-link ' href=''>Contact</a>
                     </li>
                 </ul>
                 <form id='formRecherche' class='form-inline my-2 my-xl-0'>
                     <input id='barreRecherche' class='form-control mr-sm-2' type='search' placeholder='artist,album,titre...' aria-label='Search' />
-                    <button onClick={buttons.handleOnClick} id='btnRecherche' class='btn btn-outline-success my-2 my-sm-0' type='submit'>Rechercher</button>
+                    <button id='btnRecherche' class='btn btn-outline-success my-2 my-sm-0' type='submit'>Rechercher</button>
                 </form>
             </div>
         </nav>

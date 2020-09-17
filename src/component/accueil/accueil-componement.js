@@ -28,29 +28,6 @@ const AccueilComponent = () => (
 
         </div>
 
-        {/* <div id='divJoinUs'>
-            <div id='divTextMarketing'>
-                <div id='divText1' href='#'>
-                    <p>Ressentez la Musique</p>
-
-                </div>
-                <div id='divTextAbonnement'>
-                    <p>Ecoutez 20 Millions de titres en ilimite</p>
-                </div>
-                <div id='divBtnJoin'>
-                    <Button id='btnJoin' variant='outlined'>S'inscrire</Button>
-
-                </div>
-
-            </div>
-            <div id='divImgMarketing'>
-                <a id='imgJoinUsLink' class='' href='#'>
-
-                    <img id='imgJoinUs' src='src/images/image-removebg-preview (3).png' alt="s'inscrire" />
-                </a>
-            </div>
-        </div> */}
-
         <div id='divImgDecouvrir'>
             <a id='imgJoinUsLink' class='' href='#'>
 

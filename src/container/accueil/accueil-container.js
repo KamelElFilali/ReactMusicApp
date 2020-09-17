@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react' // importer librairie react
 
-import AccueilComponent from '../component/accueil-componement' // importer le composant accueil
+import AccueilComponent from '../../component/accueil/accueil-componement' // importer le composant accueil
 
-class Accueil extends Component {
+class AccueilContainer extends Component {
     render () {
         return (
 
@@ -16,4 +16,4 @@ class Accueil extends Component {
     }
 }
 
-export default Accueil
+export default AccueilContainer
