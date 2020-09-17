@@ -1,5 +1,13 @@
 import React from 'react'
 
+function renderLi (label, index) {
+    (
+        <li class='nav-item active' key={index}>
+            <a class='nav-link' href=''>{label}<span class='sr-only' /></a>
+        </li>
+    )
+}
+
 const NavBarComponent = ({ buttons }) => (
 
     <div className=''>
@@ -19,18 +27,7 @@ const NavBarComponent = ({ buttons }) => (
 
             <div class='collapse navbar-collapse' id='navbarTogglerDemo03'>
                 <ul id='listNavbar' class='navbar-nav mr-auto mt-2 mt-sm-0'>
-                    <li class='nav-item active'>
-                        <a class='nav-link' href=''>Accueil <span class='sr-only'>(current)</span></a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class='nav-link' href=''>Musiques</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class='nav-link ' href=''>Playlist</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class='nav-link ' href=''>Contact</a>
-                    </li>
+                    {buttons.map((item, index) => renderLi(item.item, index))}
                 </ul>
                 <form id='formRecherche' class='form-inline my-2 my-xl-0'>
                     <input id='barreRecherche' class='form-control mr-sm-2' type='search' placeholder='artist,album,titre...' aria-label='Search' />
