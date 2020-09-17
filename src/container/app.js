@@ -25,8 +25,24 @@ class App extends Component { // composant container qui est le formualaire 'Con
         this.setState({ isPlayListOpen: true })
     }
 
+    handleRechercheOnClick () {
+
+    }
+
     handleAccueilOnClick () {
         this.setState({ isPlayListOpen: false })
+    }
+
+    handleAlbumOnClick () {
+
+    }
+
+    handleSelectionOnClick () {
+
+    }
+
+    handleAjoutTrackOnClick () {
+
     }
 
     render () {

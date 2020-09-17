@@ -20,7 +20,7 @@ const AccueilComponent = () => (
 
             </div>
             <div id='divImgMarketing'>
-                <a id='imgJoinUsLink' class='' href='#'>
+                <a id='imgJoinUsLink' className='' href='#'>
                     <img id='imgJoinUs' src='/pub_accueil.png' alt="s'inscrire" />
                     {/* <img id='img2JoinUs' src='src/images/image-removebg-preview (3).png' alt="s'inscrire" /> */}
                 </a>
@@ -44,7 +44,7 @@ const AccueilComponent = () => (
 
             </div>
             <div id='divImgMarketing'>
-                <a id='imgJoinUsLink' class='' href='#'>
+                <a id='imgJoinUsLink' className='' href='#'>
 
                     <img id='imgJoinUs' src='src/images/image-removebg-preview (3).png' alt="s'inscrire" />
                 </a>
@@ -52,9 +52,9 @@ const AccueilComponent = () => (
         </div> */}
 
         <div id='divImgDecouvrir'>
-            <a id='imgJoinUsLink' class='' href='#'>
+            <a id='imgJoinUsLink' className='' href='#'>
 
-                <img id='imgDecouvrir' src='src/images/img_decouvrir_accueil.png' alt="s'inscrire" />
+                <img id='imgDecouvrir' src='img_decouvrir_accueil.png' alt="s'inscrire" />
             </a>
         </div>
 

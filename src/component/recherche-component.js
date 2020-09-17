@@ -1,8 +1,8 @@
 import React from 'react'
 
-const RechercheComponent = ({ onClick }) => (
+const RechercheComponent = ({ onClick, index, users }) => (
 
-    <div className=''>
+    <div data-index={index} onClick={onClick} className=''>
 
         <h1>RECHERCHE</h1>
 

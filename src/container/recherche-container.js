@@ -7,7 +7,7 @@ class RechercheContainer extends Component {
         super()
 
         this.state = {
-            users: []
+
         }
 
         // Cette liaison est nécéssaire afin de permettre
@@ -15,8 +15,14 @@ class RechercheContainer extends Component {
         this.handleClick = this.handleClick.bind(this)
     }
 
+    handleClick (event) {
+        console.log('event qui représente le click event', event)
+        console.log('this qui représente la classe ListContainer', this)
+        console.log('index:', event.target.getAttribute('data-index'))
+    }
+
     componentDidMount () {
-        fetch('http://localhost:8080/recherche', { method: 'GET' })
+        fetch('http://localhost:8080/recherches', { method: 'GET' })
 
             .then(response => response.json())
             .then(response => {
@@ -24,14 +30,10 @@ class RechercheContainer extends Component {
             })
     }
 
-    handleClick () {
-        console.log('this vaut :', this)
-    }
-
     render () {
         return (
             <div>
-                <RechercheComponent />
+                <RechercheComponent onClick={this.handleClick} users={this.state.users} />
 
             </div>
         )
