@@ -36,5 +36,4 @@ class ResultatRechercheContainer extends Component {
         )
     }
 }
-
 export default ResultatRechercheContainer
