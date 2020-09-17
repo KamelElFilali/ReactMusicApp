@@ -8,13 +8,14 @@ class NavBarContainer extends Component {
         super(props)
 
         this.state = {
-
+            options: []
         }
     }
+    // didmont
 
     render () {
         return (
-            <NavBarComponent onSubmit={this.props.onHandleRechercheOnClick} />
+            <NavBarComponent onSubmit={this.props.onHandleRechercheOnClick} options={this.state.options} />
         )
     }
 }
