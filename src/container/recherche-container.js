@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
-import RechercheComponent from '../component/recherche-component'
+// import RechercheComponent from '../component/recherche-component'
+import ResultatRechercheContainer from '../container/resultat-recherche-container'
 
 class RechercheContainer extends Component {
     constructor () {
@@ -31,7 +32,8 @@ class RechercheContainer extends Component {
     render () {
         return (
             <div>
-                <RechercheComponent />
+
+                <ResultatRechercheContainer />
             </div>
         )
     }
