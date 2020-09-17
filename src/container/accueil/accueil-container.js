@@ -10,16 +10,13 @@ class AccueilContainer extends Component {
 
         this.state = {
 
-
         }
 
-       /* console.log(this.onClick)*/
-        this.hadelOnclick=this.hadelOnclick.bind(this)
-
-
+        /* console.log(this.onClick) */
+        this.hadelOnclick = this.hadelOnclick.bind(this)
     }
 
-    hadelOnclick(){
+    hadelOnclick () {
 
     }
 
