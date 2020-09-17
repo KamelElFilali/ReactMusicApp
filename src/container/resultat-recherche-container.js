@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 import ResultatRechercheComponent from '../component/resultat-recherche-component'
 
 class ResultatRechercheContainer extends Component {
-    constructor () {
-        super()
+    constructor (props) {
+        super(props)
 
         this.state = {
 

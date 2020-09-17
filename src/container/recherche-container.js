@@ -4,8 +4,8 @@ import React, { Component } from 'react'
 import ResultatRechercheContainer from '../container/resultat-recherche-container'
 
 class RechercheContainer extends Component {
-    constructor () {
-        super()
+    constructor (props) {
+        super(props)
 
         this.state = {
             users: []
@@ -17,7 +17,7 @@ class RechercheContainer extends Component {
     }
 
     componentDidMount () {
-        fetch('http://localhost:8080/recherche', { method: 'GET' })
+        fetch('http://localhost:8080/recherches', { method: 'GET' })
 
             .then(response => response.json())
             .then(response => {
@@ -32,7 +32,6 @@ class RechercheContainer extends Component {
     render () {
         return (
             <div>
-
                 <ResultatRechercheContainer />
             </div>
         )
