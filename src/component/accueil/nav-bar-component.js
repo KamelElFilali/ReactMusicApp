@@ -1,14 +1,14 @@
 import React from 'react'
 
 function renderLi (buttons, index) {
-    (
+    return (
         <li class='nav-item active' key={index}>
-            <a class='nav-link' onClick ={buttons.onClick} href=''>{buttons.label}<span class='sr-only' /></a>
+            <a class='nav-link' onClick={buttons.onClick} href=''>{buttons.label}<span class='sr-only' /></a>
         </li>
     )
 }
 
-const NavBarComponent = ({buttons}) => (
+const NavBarComponent = ({ buttons }) => (
 
     <div className=''>
 
@@ -27,9 +27,8 @@ const NavBarComponent = ({buttons}) => (
 
             <div class='collapse navbar-collapse' id='navbarTogglerDemo03'>
                 <ul id='listNavbar' class='navbar-nav mr-auto mt-2 mt-sm-0'>
-
-
-                      {buttons.map((buttons, index) => renderLi(buttons, index))}
+                    {/* map */}
+                    {buttons.map((buttons, index) => renderLi(buttons, index))}
 
                     <div id='divDropDown' class='dropdown'>
                         <button id='btnDropDown' class='btn btn-secondary dropdown-toggle' type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
