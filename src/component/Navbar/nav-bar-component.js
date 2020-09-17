@@ -20,7 +20,7 @@ const NavBarComponent = ({ buttons }) => (
             <div class='collapse navbar-collapse' id='navbarTogglerDemo03'>
                 <ul id='listNavbar' class='navbar-nav mr-auto mt-2 mt-sm-0'>
                     <li class='nav-item active'>
-                        <a class='nav-link' href=''>Accueilsss <span class='sr-only'>(current)</span></a>
+                        <a class='nav-link' href=''>Accueil <span class='sr-only'>(current)</span></a>
                     </li>
                     <li class='nav-item'>
                         <a class='nav-link' href=''>Musiques</a>
@@ -28,6 +28,16 @@ const NavBarComponent = ({ buttons }) => (
                     <li class='nav-item'>
                         <a class='nav-link ' href=''>Playlist</a>
                     </li>
+                    <div id='divDropDown' class='dropdown'>
+                        <button id='btnDropDown' class='btn btn-secondary dropdown-toggle' type='button' id='dropdownMenu2' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+                            Playlist
+                        </button>
+                        <div id='divListDropDown' class='dropdown-menu' aria-labelledby='dropdownMenu2'>
+                            <button class='dropdown-item' type='button'>Action</button>
+                            <button class='dropdown-item' type='button'>Another action</button>
+                            <button class='dropdown-item' type='button'>Something else here</button>
+                        </div>
+                    </div>
                     <li class='nav-item'>
                         <a class='nav-link ' href=''>Contact</a>
                     </li>
