@@ -8,34 +8,31 @@ class RechercheContainer extends Component {
         super(props)
 
         this.state = {
-
+            pageRecherche: 'resultat',
+            masterId: ''
         }
 
         // Cette liaison est nécéssaire afin de permettre
         // l'utilisation de `this` dans la fonction de rappel.
-        this.handleClick = this.handleClick.bind(this)
+        this.handleEachAlbumClick = this.handleEachAlbumClick.bind(this)
     }
 
-    handleClick (event) {
-        console.log('event qui représente le click event', event)
-        console.log('this qui représente la classe ListContainer', this)
-        console.log('index:', event.target.getAttribute('data-index'))
-    }
-
-    componentDidMount () {
-        fetch('http://localhost:8080/recherches', { method: 'GET' })
-
-            .then(response => response.json())
-            .then(response => {
-                this.setState({ users: response })
-            })
+    handleEachAlbumClick (event) {
+        const masterIdClicked = event.target.getAttribute('data-key')
+        this.setState({ pageRecherche: 'resultatDetails', masterId: masterIdClicked })
     }
 
     render () {
+        let nextRechercheContainer = ''
+        switch (this.state.pageRecherche) {
+        case 'resultat':
+            nextRechercheContainer = <ResultatRechercheContainer onHandleEachAlbumClick={this.handleEachAlbumClick} />
+            break
+        case 'resultatDetails':
+            nextRechercheContainer = <DetailsRechercheContainer masterId={this.state.masterId} />
+        }
         return (
-            <div>
-                <ResultatRechercheContainer />
-            </div>
+            nextRechercheContainer
         )
     }
 }
