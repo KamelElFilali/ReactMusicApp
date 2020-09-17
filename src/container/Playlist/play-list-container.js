@@ -15,7 +15,9 @@ class PlayListContainer extends Component {
 
     render () {
         return (
-            <div />
+            <div>
+                <SelectPlayListContainer />
+            </div>
         )
     }
 }
