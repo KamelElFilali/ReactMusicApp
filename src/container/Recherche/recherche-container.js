@@ -8,12 +8,18 @@ class RechercheContainer extends Component {
         super(props)
 
         this.state = {
-            users: []
+
         }
 
         // Cette liaison est nécéssaire afin de permettre
         // l'utilisation de `this` dans la fonction de rappel.
         this.handleClick = this.handleClick.bind(this)
+    }
+
+    handleClick (event) {
+        console.log('event qui représente le click event', event)
+        console.log('this qui représente la classe ListContainer', this)
+        console.log('index:', event.target.getAttribute('data-index'))
     }
 
     componentDidMount () {
@@ -23,10 +29,6 @@ class RechercheContainer extends Component {
             .then(response => {
                 this.setState({ users: response })
             })
-    }
-
-    handleClick () {
-        console.log('this vaut :', this)
     }
 
     render () {

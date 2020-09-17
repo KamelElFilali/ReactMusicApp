@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NavBarComponent = () => (
+const NavBarComponent = ({ onSubmit }) => (
 
     <div className=''>
 
@@ -20,7 +20,7 @@ const NavBarComponent = () => (
             <div class='collapse navbar-collapse' id='navbarTogglerDemo03'>
                 <ul id='listNavbar' class='navbar-nav mr-auto mt-2 mt-sm-0'>
                     <li class='nav-item active'>
-                        <a class='nav-link' href=''>Accueil <span class='sr-only'>(current)</span></a>
+                        <a class='nav-link' href=''>Accueilsss <span class='sr-only'>(current)</span></a>
                     </li>
                     <li class='nav-item'>
                         <a class='nav-link' href=''>Musiques</a>
@@ -28,22 +28,11 @@ const NavBarComponent = () => (
                     <li class='nav-item'>
                         <a class='nav-link ' href=''>Playlist</a>
                     </li>
-                    <div id='divDropDown' class='dropdown'>
-                        <button id='btnDropDown' class='btn btn-secondary dropdown-toggle' type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-                            Playlist
-                        </button>
-                        <div id='divListDropDown' class='dropdown-menu' aria-labelledby='dropdownMenu2'>
-                            <button class='dropdown-item' type='button'>Select 1</button>
-                            <button class='dropdown-item' type='button'>Select 1</button>
-                            <button class='dropdown-item' type='button'>Select 1</button>
-                        </div>
-                    </div>
-
                     <li class='nav-item'>
                         <a class='nav-link ' href=''>Contact</a>
                     </li>
                 </ul>
-                <form id='formRecherche' class='form-inline my-2 my-xl-0'>
+                <form onSubmit={onSubmit} id='formRecherche' class='form-inline my-2 my-xl-0'>
                     <input id='barreRecherche' class='form-control mr-sm-2' type='search' placeholder='artist,album,titre...' aria-label='Search' />
                     <button id='btnRecherche' class='btn btn-outline-success my-2 my-sm-0' type='submit'>Rechercher</button>
                 </form>

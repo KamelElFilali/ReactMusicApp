@@ -4,14 +4,17 @@ import React, { Component } from 'react' // importer librairie react
 import NavBarComponent from '../../component/accueil/nav-bar-component' // importer le composant navbar
 // import '../component/Navbar/navbar.css'
 class NavBarContainer extends Component {
+    constructor (props) {
+        super(props)
+
+        this.state = {
+
+        }
+    }
+
     render () {
         return (
-
-            <div>
-                <NavBarComponent />
-
-            </div>
-
+            <NavBarComponent onSubmit={this.props.onHandleRechercheOnClick} />
         )
     }
 }

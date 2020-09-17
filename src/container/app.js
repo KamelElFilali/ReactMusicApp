@@ -19,16 +19,37 @@ class App extends Component { // composant container qui est le formualaire 'Con
             isPlayListOpen: false
         }
 
+        this.handleRechercheOnClick = this.handleRechercheOnClick.bind(this)
         this.handlePlayListOnClick = this.handlePlayListOnClick.bind(this)
         this.handleAccueilOnClick = this.handleAccueilOnClick.bind(this)
+        this.handleAlbumOnClick = this.handleAlbumOnClick.bind(this)
+        this.handleAjoutTrackOnClick = this.handleAjoutTrackOnClick.bind(this)
     }
 
     handlePlayListOnClick () {
         this.setState({ isPlayListOpen: true })
     }
 
+    handleRechercheOnClick (event) {
+        event.preventDefault()
+        const rechercheInput = document.getElementById('barreRecherche')
+        console.log(rechercheInput.value)
+    }
+
     handleAccueilOnClick () {
         this.setState({ isPlayListOpen: false })
+    }
+
+    handleAlbumOnClick () {
+
+    }
+
+    handleSelectionOnClick () {
+
+    }
+
+    handleAjoutTrackOnClick () {
+
     }
 
     render () {
@@ -41,7 +62,7 @@ class App extends Component { // composant container qui est le formualaire 'Con
             <div>
                 <div>
 
-                    <NavBarContainer buttons={BUTTONS} />
+                    <NavBarContainer onHandleRechercheOnClick={this.handleRechercheOnClick} buttons={BUTTONS} />
 
                 </div>
                 <div>
