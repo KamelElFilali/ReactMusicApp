@@ -7,7 +7,7 @@ import AccueilContainer from './accueil/accueil-container'
 
 import RechercheContainer from './recherche/recherche-container'
 
-import PlayListContainer from './playlist/play-list-container'
+/* import PlayListContainer from './playlist/play-list-container' */
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -53,16 +53,11 @@ class App extends Component { // composant container qui est le formualaire 'Con
     }
 
     render () {
-        const BUTTONS = [{
-
-            handleOnClick: this.handlePlayListOnClick
-        }]
-
         return (
             <div>
                 <div>
 
-                    <NavBarContainer onHandleRechercheOnClick={this.handleRechercheOnClick} buttons={BUTTONS} />
+                    <NavBarContainer onHandleRechercheOnClick={this.handleRechercheOnClick} />
 
                 </div>
                 <div>

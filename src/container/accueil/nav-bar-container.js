@@ -10,11 +10,32 @@ class NavBarContainer extends Component {
         this.state = {
 
         }
+
+        this.handleOnClick = this.handleOnClick.bind(this)
+
+        this.BUTTONS = [{
+            label: 'Acceuil',
+            onClick: this.handleOnClick
+        }, {
+            label: 'Musiques',
+            onClick: this.handleOnClick
+        }, {
+            label: 'PlayList',
+            onClick: this.handleOnClick
+        }, {
+            label: 'Contact',
+            onClick: this.handleOnClick
+        }
+        ]
+    }
+
+    handleOnClick () {
+        console.log('test button click')
     }
 
     render () {
         return (
-            <NavBarComponent onSubmit={this.props.onHandleRechercheOnClick} />
+            <NavBarComponent buttons={this.BUTTONS} onSubmit={this.props.onHandleRechercheOnClick} />
         )
     }
 }

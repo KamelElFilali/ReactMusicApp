@@ -1,14 +1,15 @@
 import React from 'react'
+import YouTube from 'react-youtube'
 
-function renderLi (buttons, index) {
-    (
+function renderLi (button, index) {
+    return (
         <li class='nav-item active' key={index}>
-            <a class='nav-link' onClick ={buttons.onClick} href=''>{buttons.label}<span class='sr-only' /></a>
+            <a class='nav-link' href=''>{button.label}</a>
         </li>
     )
 }
 
-const NavBarComponent = ({buttons}) => (
+const NavBarComponent = ({ buttons }) => (
 
     <div className=''>
 
@@ -27,9 +28,10 @@ const NavBarComponent = ({buttons}) => (
 
             <div class='collapse navbar-collapse' id='navbarTogglerDemo03'>
                 <ul id='listNavbar' class='navbar-nav mr-auto mt-2 mt-sm-0'>
+                    {console.log('test')}
 
-
-                      {buttons.map((buttons, index) => renderLi(buttons, index))}
+                    {buttons.map((button, index) => renderLi(button, index))}
+                    {console.log('buttons', buttons)}
 
                     <div id='divDropDown' class='dropdown'>
                         <button id='btnDropDown' class='btn btn-secondary dropdown-toggle' type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
