@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NavBarComponent = ({ onSubmit }) => (
+const NavBarComponent = ({ onSubmit, options }) => (
 
     <div className=''>
 
@@ -37,8 +37,7 @@ const NavBarComponent = ({ onSubmit }) => (
                         <select class='custom-select' id='inputGroupSelect04'>
                             <option selected>choisir playlist</option>
                             <option value='1'>genre1</option>
-                            <option value='2'>genre2</option>
-                            <option value='3'>genre3</option>
+
                         </select>
                         <div class='input-group-append'>
                             <button id='btnPlaylist' class='btn btn-outline-secondary' type='button'>Afficher</button>
