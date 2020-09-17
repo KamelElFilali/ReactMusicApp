@@ -1,14 +1,18 @@
 import React from 'react'
 
-function renderLi (buttons, index) {
+<<<<<<< HEAD:src/component/accueil/nav-bar-component.js
+const NavBarComponent = () => (
+=======
+function renderLi (label, index) {
     (
         <li class='nav-item active' key={index}>
-            <a class='nav-link' onClick ={buttons.onClick} href=''>{buttons.label}<span class='sr-only' /></a>
+            <a class='nav-link' href=''>{label}<span class='sr-only' /></a>
         </li>
     )
 }
 
-const NavBarComponent = ({buttons}) => (
+const NavBarComponent = ({ buttons }) => (
+>>>>>>> origin/feature/Ahmed:src/component/Navbar/nav-bar-component.js
 
     <div className=''>
 
@@ -27,10 +31,16 @@ const NavBarComponent = ({buttons}) => (
 
             <div class='collapse navbar-collapse' id='navbarTogglerDemo03'>
                 <ul id='listNavbar' class='navbar-nav mr-auto mt-2 mt-sm-0'>
-
-
-                      {buttons.map((buttons, index) => renderLi(buttons, index))}
-
+<<<<<<< HEAD:src/component/accueil/nav-bar-component.js
+                    <li class='nav-item active'>
+                        <a class='nav-link' href=''>Accueil <span class='sr-only'>(current)</span></a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href=''>Musiques</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link ' href=''>Playlist</a>
+                    </li>
                     <div id='divDropDown' class='dropdown'>
                         <button id='btnDropDown' class='btn btn-secondary dropdown-toggle' type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
                             Playlist
@@ -41,6 +51,13 @@ const NavBarComponent = ({buttons}) => (
                             <button class='dropdown-item' type='button'>Select 1</button>
                         </div>
                     </div>
+
+                    <li class='nav-item'>
+                        <a class='nav-link ' href=''>Contact</a>
+                    </li>
+=======
+                    {buttons.map((item, index) => renderLi(item.item, index))}
+>>>>>>> origin/feature/Ahmed:src/component/Navbar/nav-bar-component.js
                 </ul>
                 <form id='formRecherche' class='form-inline my-2 my-xl-0'>
                     <input id='barreRecherche' class='form-control mr-sm-2' type='search' placeholder='artist,album,titre...' aria-label='Search' />
