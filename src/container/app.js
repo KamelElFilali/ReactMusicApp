@@ -6,9 +6,8 @@ import PlayList from '../component/card-play-list-component' // importer le comp
 import AccueilComponent from '../component/accueil-componement'
 import Accueil from '../container/accueil-container'
 import NavBar from '../container/nav-bar-container'
-import DetailsRechercheContainer from '../container/recherche-container'
-import SelectPlayListContainer from '../container/recherche-container'
-import PlayVideoContainer from '../container/Playlist/play-video-container'
+import DetailsRechercheContainer from './Recherche/recherche-container'
+import PlayListContainer from './Playlist/play-list-container'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
