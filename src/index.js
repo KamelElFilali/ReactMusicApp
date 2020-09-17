@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './css/navbar.css'
 // import './css/style.css'
 import './css/accueil.css'
-import './component/Navbar/animation-nav-bar'
+import './component/accueil/animation-nav-bar'
 
 const rootElement = document.getElementById('app')
 ReactDOM.render(

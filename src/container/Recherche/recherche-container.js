@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
-import RechercheComponent from '../component/recherche-component'
+import ResultatRechercheContainer from './resultat-recherche-container'
+import DetailsRechercheContainer from './details-recherche-container'
 
 class RechercheContainer extends Component {
     constructor () {
@@ -33,8 +34,12 @@ class RechercheContainer extends Component {
     render () {
         return (
             <div>
+<<<<<<< HEAD:src/container/recherche-container.js
                 <RechercheComponent onClick={this.handleClick} users={this.state.users} />
+=======
+>>>>>>> master:src/container/Recherche/recherche-container.js
 
+                <ResultatRechercheContainer />
             </div>
         )
     }
