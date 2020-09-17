@@ -7,7 +7,9 @@ class ResultatRechercheContainer extends Component {
         super(props)
 
         this.state = {
-
+            masterIdAlbum: [],
+            titreAlbum: [],
+            imageUrAlbum: []
         }
 
         this.handleClick = this.handleClick.bind(this)
@@ -17,18 +19,23 @@ class ResultatRechercheContainer extends Component {
         fetch('http://localhost:8080/recherches', { method: 'GET' })
             .then(response => response.json())
             .then(responseJson => {
-                responseJson.master_id
+                const result = responseJson.results
+                result.map((item, index) => {
+                    this.state.imageUrAlbum[index] = item.thumb
+                    this.state.titreAlbum[index] = item.title
+                    this.state.masterIdAlbum[index] = item.master_id
+                })
             })
     }
 
     handleClick (event) {
-        console.log(event.currentTarget.getAttribute('data-key'), ' - ', event.currentTarget.value)
+        console.log(event.target.getAttribute('data-key'), ' 1- ', event.target.value)
     }
 
     render () {
         return (
             <div>
-                <ResultatRechercheComponent onClick={this.handleClick} />
+                <ResultatRechercheComponent onClick={this.handleClick} url={this.state.imageUrAlbum[index]} textP={} masterId={this.state.masterIdAlbum[index]} />
             </div>
         )
     }
