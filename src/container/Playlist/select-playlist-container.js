@@ -7,14 +7,30 @@ class SelectPlayListContainer extends Component {
         super(props)
 
         this.state = {
-
+            result: []
         }
+    }
+
+    componentDidMount () {
+        const URL = 'http://localhost:8080/playlists/tracks/'
+
+        fetch(URL, { method: 'GET' })
+            .then(response => response.json())
+            .then(responseJson => {
+                const result = responseJson.results
+                this.setState({ result: result })
+            })
+    }
+
+    handleClick () {
+
     }
 
     render () {
         return (
             <div>
                 <SelectPlayListComponent />
+                {this.state.result.map((item, index) => <SelectPlayListComponent onClick={this.handleClick} key={index} nomArtiste={item} titreTrack={item.title} url={item.thumb} dataIdYoutube={item.uri} />)}
             </div>
         )
     }

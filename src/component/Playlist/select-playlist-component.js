@@ -1,11 +1,6 @@
 import React from 'react'
-import SelectPlayListContainer from '../../container/playlist/select-playlist-container'
 
-const event = function (e) {
-    const click = new SelectPlayListContainer()
-    return click.handleClicks(e)
-}
-const SelectPlayListComponent = ({ onClick, nomArtiste, titreTrack, dataIdYoutube, urlImage }) => (
+const SelectPlayListComponent = ({ onClick, nomArtiste, titreTrack, dataIdYoutube, urlImageAlbum }) => (
     <div class='divContainerCardPlayList'>
 
         <div class='swiper-container' onClick={onClick}>
@@ -14,7 +9,7 @@ const SelectPlayListComponent = ({ onClick, nomArtiste, titreTrack, dataIdYoutub
 
                 <div class='swiper-slide'>
                     <div class='picture'>
-                        <img src='' alt='' />
+                        <img src={urlImageAlbum.uri} alt='photo album' data-key={dataIdYoutube} />
                     </div>
                     <div class='detail'>
                         <h3 id='titreTrackCardPlayList'>{titreTrack}</h3>

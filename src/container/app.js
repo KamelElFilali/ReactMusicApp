@@ -59,7 +59,7 @@ class App extends Component { // composant container qui est le formualaire 'Con
 
         switch (this.state.container) {
         case 'accueil':
-            nextContainer = <AccueilContainer />
+            nextContainer = <PlayListContainer />
             break
         case 'recherche':
             nextContainer = <RechercheContainer />
