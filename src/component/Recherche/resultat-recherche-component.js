@@ -6,6 +6,7 @@ const ResultatRechercheComponent = ({ textP, url, masterId, onClick }) => (
         <div class='card-body'>
             <p class='card-text'>{textP}</p>
             <button type='button' class='btn btn-primary'>Details</button>
+
         </div>
     </div>
 )

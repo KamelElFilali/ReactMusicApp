@@ -1,6 +1,10 @@
 import React from 'react'
 
-const NavBarComponent = ({ onSubmit, options }) => (
+const optionRender = (genre, index) => (
+    <option value={index} key={index}>{genre.type}</option>
+)
+
+const NavBarComponent = ({ onSubmit, genres }) => (
 
     <div className=''>
 
@@ -18,26 +22,12 @@ const NavBarComponent = ({ onSubmit, options }) => (
             </div>
 
             <div class='collapse navbar-collapse' id='navbarTogglerDemo03'>
-                <ul id='listNavbar' class='navbar-nav mr-auto mt-2 mt-sm-0'>
-                    <li class='nav-item active'>
-                        <a class='nav-link' href=''>Accueilsss <span class='sr-only'>(current)</span></a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class='nav-link' href=''>Musiques</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class='nav-link ' href=''>Playlist</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class='nav-link ' href=''>Contact</a>
-                    </li>
-                </ul>
+                <ul id='listNavbar' class='navbar-nav mr-auto mt-2 mt-sm-0' />
                 <div id='divSelectPlaylist'>
                     <div class='input-group'>
                         <select class='custom-select' id='inputGroupSelect04'>
                             <option selected>choisir playlist</option>
-                            <option value='1'>genre1</option>
-
+                            {genres.map((genre, index) => optionRender(genre, index))}
                         </select>
                         <div class='input-group-append'>
                             <button id='btnPlaylist' class='btn btn-outline-secondary' type='button'>Afficher</button>

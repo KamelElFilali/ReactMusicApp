@@ -51,6 +51,13 @@ class App extends Component { // composant container qui est le formualaire 'Con
 
     }
 
+    componentDidMount () {
+        document.getElementById('btnPlaylist').addEventListener('click', (event) => {
+            this.setState({ container: 'playlist', rechercheValeur: '' })
+            const playlistId = document.getElementById('inputGroupSelect04').value
+        })
+    }
+
     render () {
         const BUTTONS = [{
             handleOnClick: this.handlePlayListOnClick
