@@ -1,6 +1,10 @@
 import React from 'react'
 
-const NavBarComponent = ({ onSubmit }) => (
+const optionRender = (genre, index) => (
+    <option value={index} key={index}>{genre.type}</option>
+)
+
+const NavBarComponent = ({ onSubmit, genres }) => (
 
     <div className=''>
 
@@ -36,9 +40,8 @@ const NavBarComponent = ({ onSubmit }) => (
                     <div class='input-group'>
                         <select class='custom-select' id='inputGroupSelect04'>
                             <option selected>choisir playlist</option>
-                            <option value='1'>genre1</option>
-                            <option value='2'>genre2</option>
-                            <option value='3'>genre3</option>
+
+                            {genres.map((genre, index) => optionRender(genre, index))}
                         </select>
                         <div class='input-group-append'>
                             <button id='btnPlaylist' class='btn btn-outline-secondary' type='button'>Afficher</button>

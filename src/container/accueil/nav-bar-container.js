@@ -8,13 +8,21 @@ class NavBarContainer extends Component {
         super(props)
 
         this.state = {
-
+            genres: []
         }
+    }
+
+    componentDidMount () {
+        fetch('http://localhost:8080/playlists/genres', { method: 'GET' })
+            .then(response => response.json())
+            .then(responseJson => {
+                this.setState({ genres: responseJson })
+            })
     }
 
     render () {
         return (
-            <NavBarComponent onSubmit={this.props.onHandleRechercheOnClick} />
+            <NavBarComponent onSubmit={this.props.onHandleRechercheOnClick} genres={this.state.genres} />
         )
     }
 }
