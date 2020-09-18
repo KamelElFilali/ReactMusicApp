@@ -8,9 +8,14 @@ class NavBarContainer extends Component {
         super(props)
 
         this.state = {
+<<<<<<< HEAD
             genres: []
+=======
+            options: []
+>>>>>>> b076b424eb11cfdca9f1cea30900095e99cd04b3
         }
     }
+    // didmont
 
     componentDidMount () {
         fetch('http://localhost:8080/playlists/genres', { method: 'GET' })
@@ -22,7 +27,11 @@ class NavBarContainer extends Component {
 
     render () {
         return (
+<<<<<<< HEAD
             <NavBarComponent onSubmit={this.props.onHandleRechercheOnClick} genres={this.state.genres} />
+=======
+            <NavBarComponent onSubmit={this.props.onHandleRechercheOnClick} options={this.state.options} />
+>>>>>>> b076b424eb11cfdca9f1cea30900095e99cd04b3
         )
     }
 }

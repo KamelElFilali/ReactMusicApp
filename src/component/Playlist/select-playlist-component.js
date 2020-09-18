@@ -5,10 +5,10 @@ const event = function (e) {
     const click = new SelectPlayListContainer()
     return click.handleClicks(e)
 }
-const SelectPlayListComponent = ({ buttons }) => (
+const SelectPlayListComponent = ({ onClick, nomArtiste, titreTrack, dataIdYoutube, urlImage }) => (
     <div class='divContainerCardPlayList'>
 
-        <div class='swiper-container'>
+        <div class='swiper-container' onClick={onClick}>
 
             <div class='swiper-wrapper'>
 
@@ -17,14 +17,13 @@ const SelectPlayListComponent = ({ buttons }) => (
                         <img src='' alt='' />
                     </div>
                     <div class='detail'>
-                        <h3>{}</h3>
-                        <span>{}</span>
+                        <h3 id='titreTrackCardPlayList'>{titreTrack}</h3>
+                        <span id='nomArtisteCardPlayList'>{nomArtiste}</span>
                     </div>
                 </div>
 
             </div>
         </div>
-        {/* {buttons.map((buttons, index) => renderDiv(buttons, index))} */}
     </div>
 
 )
