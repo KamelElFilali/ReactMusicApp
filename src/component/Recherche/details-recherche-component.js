@@ -5,7 +5,7 @@ const DetailsRechercheComponent = ({ tracklistsObjec, masterIdToCoponent }) => (
         <div>
             <div>
                 <span>
-                    {title}
+                    {}
                 </span>
             </div>
             <div>
