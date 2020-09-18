@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import DetailsRechercheComponent from '../../component/recherche/details-recherche-component'
 import DetailsAlbumRechercheComponent from '../../component/recherche/details-album-recherche-component'
+
 class DetailsRechercheContainer extends Component {
     constructor (props) {
         super(props)
@@ -12,7 +13,6 @@ class DetailsRechercheContainer extends Component {
             genres: [],
             year: '',
             title: ''
-
         }
     }
 
