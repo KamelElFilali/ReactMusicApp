@@ -5,14 +5,9 @@ import ResultatRechercheComponent from '../../component/recherche/resultat-reche
 class ResultatRechercheContainer extends Component {
     constructor (props) {
         super(props)
-
         this.state = {
-            masterIdAlbum: [],
-            titreAlbum: [],
-            imageUrAlbum: []
+            result: []
         }
-
-        this.handleClick = this.handleClick.bind(this)
     }
 
     componentDidMount () {
@@ -20,25 +15,16 @@ class ResultatRechercheContainer extends Component {
             .then(response => response.json())
             .then(responseJson => {
                 const result = responseJson.results
-                result.map((item, index) => {
-                    this.state.imageUrAlbum[index] = item.thumb
-                    this.state.titreAlbum[index] = item.title
-                    this.state.masterIdAlbum[index] = item.master_id
-                })
+                this.setState({ result: result })
             })
-    }
-
-    handleClick (event) {
-        console.log(event.target.getAttribute('data-key'), ' 1- ', event.target.value)
     }
 
     render () {
         return (
             <div>
-                <ResultatRechercheComponent onClick={this.handleClick} url={this.state.imageUrAlbum[index]} textP={} masterId={this.state.masterIdAlbum[index]} />
+                {this.state.result.map((item, index) => <ResultatRechercheComponent onClick={this.props.onHandleEachAlbumClick} key={index} textP={item.title} url={item.thumb} masterId={item.master_id} />)}
             </div>
         )
     }
 }
-
 export default ResultatRechercheContainer
