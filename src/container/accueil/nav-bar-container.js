@@ -27,11 +27,7 @@ class NavBarContainer extends Component {
 
     render () {
         return (
-<<<<<<< HEAD
             <NavBarComponent onSubmit={this.props.onHandleRechercheOnClick} genres={this.state.genres} />
-=======
-            <NavBarComponent onSubmit={this.props.onHandleRechercheOnClick} options={this.state.options} />
->>>>>>> b076b424eb11cfdca9f1cea30900095e99cd04b3
         )
     }
 }

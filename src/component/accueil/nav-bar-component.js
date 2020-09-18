@@ -44,13 +44,7 @@ const NavBarComponent = ({ onSubmit, options }) => (
                     <div class='input-group'>
                         <select class='custom-select' id='inputGroupSelect04'>
                             <option selected>choisir playlist</option>
-<<<<<<< HEAD
-
                             {genres.map((genre, index) => optionRender(genre, index))}
-=======
-                            <option value='1'>genre1</option>
-
->>>>>>> b076b424eb11cfdca9f1cea30900095e99cd04b3
                         </select>
                         <div class='input-group-append'>
                             <button id='btnPlaylist' class='btn btn-outline-secondary' type='button'>Afficher</button>
