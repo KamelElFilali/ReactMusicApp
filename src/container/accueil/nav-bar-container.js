@@ -8,7 +8,7 @@ class NavBarContainer extends Component {
         super(props)
 
         this.state = {
-
+            genres: []
         }
 
         this.handleOnClick = this.handleOnClick.bind(this)
@@ -16,13 +16,16 @@ class NavBarContainer extends Component {
         this.BUTTONS = [{
             label: 'Acceuil',
             onClick: this.handleOnClick
-        }, {
+        },
+        {
             label: 'Musiques',
             onClick: this.handleOnClick
-        }, {
+        },
+        {
             label: 'PlayList',
             onClick: this.handleOnClick
-        }, {
+        },
+        {
             label: 'Contact',
             onClick: this.handleOnClick
         }
@@ -32,10 +35,24 @@ class NavBarContainer extends Component {
     handleOnClick () {
         console.log('test button click')
     }
+    // didmont
+
+    componentDidMount () {
+        fetch('http://localhost:8080/playlists/genres', { method: 'GET' })
+            .then(response => response.json())
+            .then(responseJson => {
+                this.setState({ genres: responseJson })
+            })
+    }
 
     render () {
         return (
-            <NavBarComponent buttons={this.BUTTONS} onSubmit={this.props.onHandleRechercheOnClick} />
+
+            <div>
+                <NavBarComponent buttons={this.BUTTONS} onSubmit={this.props.onHandleRechercheOnClick} />
+
+                <NavBarComponent onSubmit={this.props.onHandleRechercheOnClick} genres={this.state.genres} />
+            </div>
         )
     }
 }
