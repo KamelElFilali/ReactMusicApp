@@ -1,8 +1,23 @@
 import React from 'react'
 
-const DetailsRechercheComponent = () => (
+const DetailsRechercheComponent = ({ title }) => (
     <div className=''>
-        <h1>RECHERCHE</h1>
+        <div>
+            <div>
+                <span>
+                    {title}
+                </span>
+            </div>
+            <div>
+                <div>
+                    <div> <img src='icone_ajout_playlist.png' alt='image pour ajoutMusique' /></div>
+                    <div> <p>ajouter a la playlist</p></div>
+
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
 )

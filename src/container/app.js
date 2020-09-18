@@ -24,6 +24,7 @@ class App extends Component { // composant container qui est le formualaire 'Con
         this.handleAccueilOnClick = this.handleAccueilOnClick.bind(this)
         this.handleAlbumOnClick = this.handleAlbumOnClick.bind(this)
         this.handleAjoutTrackOnClick = this.handleAjoutTrackOnClick.bind(this)
+        this.handleSelectionTrackOnClick = this.handleSelectionTrackOnClick.bind(this)
     }
 
     handlePlayListOnClick () {
@@ -44,12 +45,13 @@ class App extends Component { // composant container qui est le formualaire 'Con
 
     }
 
-    handleSelectionOnClick () {
+    handleSelectionTrackOnClick () {
 
     }
 
-    handleAjoutTrackOnClick () {
-
+    handleAjoutTrackOnClick (event) {
+        event.preventDefault()
+        console.log('ajout track')
     }
 
     render () {
