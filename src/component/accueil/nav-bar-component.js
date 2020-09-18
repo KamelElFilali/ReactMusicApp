@@ -22,20 +22,7 @@ const NavBarComponent = ({ onSubmit, genres }) => (
             </div>
 
             <div class='collapse navbar-collapse' id='navbarTogglerDemo03'>
-                <ul id='listNavbar' class='navbar-nav mr-auto mt-2 mt-sm-0'>
-                    <li class='nav-item active'>
-                        <a class='nav-link' href=''>Accueilsss <span class='sr-only'>(current)</span></a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class='nav-link' href=''>Musiques</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class='nav-link ' href=''>Playlist</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class='nav-link ' href=''>Contact</a>
-                    </li>
-                </ul>
+                <ul id='listNavbar' class='navbar-nav mr-auto mt-2 mt-sm-0' />
                 <div id='divSelectPlaylist'>
                     <div class='input-group'>
                         <select class='custom-select' id='inputGroupSelect04'>
