@@ -8,11 +8,8 @@ class NavBarContainer extends Component {
         super(props)
 
         this.state = {
-<<<<<<< HEAD
-            genres: []
-=======
+            genres: [],
             options: []
->>>>>>> b076b424eb11cfdca9f1cea30900095e99cd04b3
         }
     }
     // didmont

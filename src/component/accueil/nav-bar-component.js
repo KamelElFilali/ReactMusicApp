@@ -1,14 +1,10 @@
 import React from 'react'
 
-<<<<<<< HEAD
 const optionRender = (genre, index) => (
     <option value={index} key={index}>{genre.type}</option>
 )
 
 const NavBarComponent = ({ onSubmit, genres }) => (
-=======
-const NavBarComponent = ({ onSubmit, options }) => (
->>>>>>> b076b424eb11cfdca9f1cea30900095e99cd04b3
 
     <div className=''>
 
