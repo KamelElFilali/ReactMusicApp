@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DetailsRechercheComponent = ({ title }) => (
+const DetailsRechercheComponent = ({ tracklistsObjec, masterIdToCoponent }) => (
     <div className=''>
         <div>
             <div>
