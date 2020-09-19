@@ -7,7 +7,7 @@ import AccueilContainer from './accueil/accueil-container'
 
 import RechercheContainer from './recherche/recherche-container'
 
-/* import PlayListContainer from './playlist/play-list-container' */
+import PlayListContainer from './playlist/play-list-container'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -19,7 +19,8 @@ class App extends Component { // composant container qui est le formualaire 'Con
 
         this.state = {
             container: 'accueil',
-            rechercheValeur: ''
+            rechercheValeur: '',
+            playlistId: ''
         }
 
         this.handleRechercheOnClick = this.handleRechercheOnClick.bind(this)
@@ -27,6 +28,7 @@ class App extends Component { // composant container qui est le formualaire 'Con
         this.handleAccueilOnClick = this.handleAccueilOnClick.bind(this)
         this.handleAlbumOnClick = this.handleAlbumOnClick.bind(this)
         this.handleAjoutTrackOnClick = this.handleAjoutTrackOnClick.bind(this)
+        this.handleSelectionTrackOnClick = this.handleSelectionTrackOnClick.bind(this)
     }
 
     handleRechercheOnClick (event) {
@@ -43,24 +45,23 @@ class App extends Component { // composant container qui est le formualaire 'Con
 
     }
 
-    handleSelectionOnClick () {
+    handleSelectionTrackOnClick () {
 
     }
 
-    handleAjoutTrackOnClick () {
-
+    handleAjoutTrackOnClick (event) {
+        event.preventDefault()
+        console.log('ajout track')
     }
 
     componentDidMount () {
         document.getElementById('btnPlaylist').addEventListener('click', (event) => {
             this.setState({ container: 'playlist', rechercheValeur: '' })
-            const playlistId = document.getElementById('inputGroupSelect04').value
+            this.state.playlistId = document.getElementById('inputGroupSelect04').value
         })
     }
 
     render () {
-<<<<<<< HEAD
-=======
         const BUTTONS = [{
             handleOnClick: this.handlePlayListOnClick
         }]
@@ -80,12 +81,11 @@ class App extends Component { // composant container qui est le formualaire 'Con
             nextContainer = <AccueilContainer />
         }
 
->>>>>>> master
         return (
             <div>
                 <div>
 
-                    <NavBarContainer onHandleRechercheOnClick={this.handleRechercheOnClick} />
+                    <NavBarContainer onHandleRechercheOnClick={this.handleRechercheOnClick} buttons={BUTTONS} />
 
                 </div>
                 <div>

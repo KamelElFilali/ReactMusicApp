@@ -1,8 +1,4 @@
 import React from 'react'
-const optionRender = (genre, index) => (
-    <option value={index} key={index}>{genre.type}</option>
-)
-
 function renderLi (buttons, index) {
     return (
         <li class='nav-item active' key={index}>
@@ -10,8 +6,10 @@ function renderLi (buttons, index) {
         </li>
     )
 }
-
-const NavBarComponent = ({ onSubmit, genres }) => (
+const optionRender = (genre, index) => (
+    <option value={index} key={index}>{genre.type}</option>
+)
+const NavBarComponent = ({ onSubmit, genres, buttons }) => (
 
     <div>
 
