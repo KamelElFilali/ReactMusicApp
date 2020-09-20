@@ -1,10 +1,16 @@
 import React from 'react'
-
+function renderLi (buttons, index) {
+    return (
+        <li class='nav-item active' key={index}>
+            <a class='nav-link' onClick={buttons.handleOnClick} href=''>{buttons.label}<span class='sr-only' /></a>
+        </li>
+    )
+}
 function optionRender (genre, index) {
     return <option value={index} key={index}>{genre.type}</option>
 }
 
-const NavBarComponent = ({ onSubmit, genres }) => (
+const NavBarComponent = ({ onSubmit, genres, buttons }) => (
 
     <div className=''>
 
@@ -23,18 +29,7 @@ const NavBarComponent = ({ onSubmit, genres }) => (
 
             <div class='collapse navbar-collapse' id='navbarTogglerDemo03'>
                 <ul id='listNavbar' class='navbar-nav mr-auto mt-2 mt-sm-0'>
-                    <li class='nav-item active'>
-                        <a class='nav-link' href=''>Accueil<span class='sr-only'>current</span></a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class='nav-link' href=''>Musiques</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class='nav-link ' href=''>Playlist</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class='nav-link ' href=''>Contact</a>
-                    </li>
+                    {buttons.map((buttons, index) => renderLi(buttons, index))}
                 </ul>
                 <div id='divSelectPlaylist'>
                     <div class='input-group'>
