@@ -9,7 +9,7 @@ const SelectPlayListComponent = ({ onClick, titleTrack, uriYoutube, index }) => 
 
                 <div class='swiper-slide'>
                     <div class='picture'>
-                        <img src={uriYoutube.uri} alt='video youtube track' />
+                        <img src={uriYoutube.uri} alt='video youtube tracks' />
 
                     </div>
                     <div class='detail'>
