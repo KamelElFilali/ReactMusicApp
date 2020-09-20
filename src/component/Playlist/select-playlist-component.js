@@ -1,19 +1,20 @@
 import React from 'react'
 
-const SelectPlayListComponent = ({ onClick, nomArtiste, titreTrack, dataIdYoutube, urlImageAlbum }) => (
+const SelectPlayListComponent = ({ onClick, titleTrack, uriYoutube, index }) => (
     <div class='divContainerCardPlayList'>
 
-        <div class='swiper-container' onClick={onClick}>
+        <div class='swiper-container' onClick={onClick} key={index}>
 
             <div class='swiper-wrapper'>
 
                 <div class='swiper-slide'>
                     <div class='picture'>
-                        <img src={urlImageAlbum.uri} alt='photo album' data-key={dataIdYoutube} />
+                        <img src={uriYoutube.uri} alt='video youtube track' />
+
                     </div>
                     <div class='detail'>
-                        <h3 id='titreTrackCardPlayList'>{titreTrack}</h3>
-                        <span id='nomArtisteCardPlayList'>{nomArtiste}</span>
+                        <h3 id='titreTrackCardPlayList'>{titleTrack}</h3>
+
                     </div>
                 </div>
 

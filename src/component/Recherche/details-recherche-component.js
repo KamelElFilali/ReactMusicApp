@@ -1,13 +1,23 @@
 import React from 'react'
 
-<<<<<<< HEAD
-const DetailsRechercheComponent = ({ li, onClick, index, text }) => (
-=======
-const DetailsRechercheComponent = ({ tracklistsObjec, masterIdToCoponent }) => (
->>>>>>> d6c1e2494955c2f2d2810eaef1b67d7dc0c6a8eb
-    <div className=''>
-        <h1>RECHERCHE</h1>
-        <li onclick={onclick}>{text}</li>
+const DetailsRechercheComponent = ({ title, masterId, youtubeUri, index, onClick }) => (
+    <div className='' key={index}>
+        <div>
+            <div>
+                <span>
+                    {title}
+                </span>
+            </div>
+            <div>
+                <div>
+                    <div> <img src='icone_ajout_playlist.png' alt='image pour ajoutMusique' onClick={onClick} data-masterId={masterId} data-uri={youtubeUri} data-title={title} /></div>
+                    <div> <p>ajouter a la playlist</p></div>
+
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
 )
