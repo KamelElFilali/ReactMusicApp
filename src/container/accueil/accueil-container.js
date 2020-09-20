@@ -39,7 +39,7 @@ class AccueilContainer extends Component {
 
             <div>
 
-                <NavBarComponent buttons={BUTTONS} />
+                {/* <NavBarComponent buttons={BUTTONS} /> */}
                 <AccueilComponent />
 
             </div>

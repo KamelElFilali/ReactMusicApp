@@ -22,7 +22,9 @@ class ResultatRechercheContainer extends Component {
     render () {
         return (
             <div>
+
                 {this.state.result.map((item, index) => <ResultatRechercheComponent onClick={this.props.onHandleEachAlbumClick} key={index} textP={item.title} url={item.thumb} masterId={item.master_id} />)}
+
             </div>
         )
     }

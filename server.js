@@ -66,7 +66,7 @@ app.get('/playlists/genres', function (request, response) {
 
 app.post('/playlists/ajout', function (request, response) {
     const bodyJsonValue = request.body
-    let reponseJSON = { operation: '202' }
+    let reponseJSON = { operation: '200' }
     const propertites = ['playlist_id', 'title', 'uri', 'master_id']
 
     try {
@@ -76,7 +76,7 @@ app.post('/playlists/ajout', function (request, response) {
             }
         })
         response.writeHead(HTTP_OK, { 'Content-Type': CONTENT_TYPE_JSON })
-        reponseJSON = { operation: '202' }
+        reponseJSON = { operation: '200' }
         response.end(JSON.stringify(reponseJSON, null, 4))
     } catch (err) {
         reponseJSON = { erreur: '404' }
