@@ -11,26 +11,11 @@ class SelectPlayListContainer extends Component {
         }
     }
 
-    componentDidMount () {
-        const URL = 'http://localhost:8080/playlists/tracks/' + this.props.playlistId
-
-        fetch(URL, { method: 'GET' })
-            .then(response => response.json())
-            .then(responseJson => {
-                const result = responseJson.results
-                this.setState({ result: result })
-            })
-    }
-
-    handleClick () {
-
-    }
-
     render () {
         return (
             <div>
                 {/* <SelectPlayListComponent /> */}
-                {this.state.result.map((item, index) => <SelectPlayListComponent onClick={this.handleClick} key={index} titleTrack={item.title} uriYoutube={item.uri} />)}
+                {this.props.trackArray.map((item, index) => <SelectPlayListComponent onClick={this.props.onHandlePlayClick} key={index} titleTrack={item.title} uriYoutube={item.uri} />)}
             </div>
         )
     }

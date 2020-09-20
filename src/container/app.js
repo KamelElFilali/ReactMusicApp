@@ -56,9 +56,7 @@ class App extends Component { // composant container qui est le formualaire 'Con
 
     componentDidMount () {
         document.getElementById('btnPlaylist').addEventListener('click', (event) => {
-            this.setState({ container: 'playlist', rechercheValeur: '' })
             this.state.playlistId = document.getElementById('inputGroupSelect04').value
-
             const playListId = document.getElementById('inputGroupSelect04').value
             if (playListId !== '-1') {
                 this.setState({ container: 'playlist', rechercheValeur: '', playlistId: document.getElementById('inputGroupSelect04').value })
@@ -82,7 +80,7 @@ class App extends Component { // composant container qui est le formualaire 'Con
             nextContainer = <RechercheContainer rechercheValeur={this.state.rechercheValeur} />
             break
         case 'playlist':
-            nextContainer = <PlayListContainer />
+            nextContainer = <PlayListContainer playlistId={this.state.playlistId} />
             break
         default:
             nextContainer = <AccueilContainer />
