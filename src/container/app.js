@@ -19,7 +19,8 @@ class App extends Component { // composant container qui est le formualaire 'Con
 
         this.state = {
             container: 'accueil',
-            rechercheValeur: ''
+            rechercheValeur: '',
+            playlistId: ''
         }
 
         this.handleRechercheOnClick = this.handleRechercheOnClick.bind(this)
@@ -55,8 +56,12 @@ class App extends Component { // composant container qui est le formualaire 'Con
 
     componentDidMount () {
         document.getElementById('btnPlaylist').addEventListener('click', (event) => {
-            this.setState({ container: 'playlist', rechercheValeur: '' })
-            const playlistId = document.getElementById('inputGroupSelect04').value
+            const playListId = document.getElementById('inputGroupSelect04').value
+            if (playListId !== '-1') {
+                this.setState({ container: 'playlist', rechercheValeur: '', playlistId: document.getElementById('inputGroupSelect04').value })
+            } else {
+                alert('Veuillez choisir une playlist pour afficher son contenu')
+            }
         })
     }
 

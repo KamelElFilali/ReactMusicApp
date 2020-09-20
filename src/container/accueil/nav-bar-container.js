@@ -11,7 +11,33 @@ class NavBarContainer extends Component {
             genres: [],
             options: []
         }
+
+        this.handleOnClick = this.handleOnClick.bind(this)
+
+        this.BUTTONS = [
+            {
+                label: 'Acceuil',
+                onClick: this.handleOnClick
+            },
+            {
+                label: 'Musiques',
+                onClick: this.handleOnClick
+            },
+            {
+                label: 'PlayList',
+                onClick: this.handleOnClick
+            },
+            {
+                label: 'Contact',
+                onClick: this.handleOnClick
+            }
+        ]
     }
+
+    handleOnClick () {
+        console.log('test button click')
+    }
+
     // didmont
 
     componentDidMount () {
@@ -24,7 +50,7 @@ class NavBarContainer extends Component {
 
     render () {
         return (
-            <NavBarComponent onSubmit={this.props.onHandleRechercheOnClick} genres={this.state.genres} />
+            <NavBarComponent onSubmit={this.props.onHandleRechercheOnClick} genres={this.state.genres} buttons={this.BUTTONS} />
         )
     }
 }
