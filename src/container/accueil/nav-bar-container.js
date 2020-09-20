@@ -3,6 +3,8 @@ import React, { Component } from 'react' // importer librairie react
 
 import NavBarComponent from '../../component/accueil/nav-bar-component' // importer le composant navbar
 // import '../component/Navbar/navbar.css'
+
+
 class NavBarContainer extends Component {
     constructor (props) {
         super(props)
@@ -11,7 +13,26 @@ class NavBarContainer extends Component {
             genres: [],
             options: []
         }
+        this.BUTTONS = [{
+            label: 'Acceuil',
+            onClick: this.handleOnClick
+        },
+        {
+            label: 'Musiques',
+            onClick: this.handleOnClick
+        },
+        {
+            label: 'PlayList',
+            onClick: this.handleOnClick
+        },
+        {
+            label: 'Contact',
+            onClick: this.handleOnClick
+        }
+        ]
     }
+
+
     // didmont
 
     componentDidMount () {
@@ -25,7 +46,7 @@ class NavBarContainer extends Component {
     render () {
         return (
 
-            <NavBarComponent buttons={this.BUTTONS} onSubmit={this.props.onHandleRechercheOnClick} />
+            <NavBarComponent buttons ={this.BUTTONS} onSubmit={this.props.onHandleRechercheOnClick} />
             <NavBarComponent onSubmit={this.props.onHandleRechercheOnClick} genres={this.state.genres} />
         )
     }
