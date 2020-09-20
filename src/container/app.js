@@ -33,7 +33,7 @@ class App extends Component { // composant container qui est le formualaire 'Con
 
     handleRechercheOnClick (event) {
         event.preventDefault()
-        const rechercheInput = document.getElementById('barreRecherche')
+        const rechercheInput = document.getElementById('barreRecherche').value
         this.setState({ container: 'recherche', rechercheValeur: rechercheInput })
     }
 
@@ -79,7 +79,7 @@ class App extends Component { // composant container qui est le formualaire 'Con
             nextContainer = <AccueilContainer />
             break
         case 'recherche':
-            nextContainer = <RechercheContainer />
+            nextContainer = <RechercheContainer rechercheValeur={this.state.rechercheValeur} />
             break
         case 'playlist':
             nextContainer = <PlayListContainer />

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import DetailsRechercheComponent from '../../component/recherche/details-recherche-component'
 import DetailsAlbumRechercheComponent from '../../component/recherche/details-album-recherche-component'
+import Discogs from '../../service/discogs'
 
 class DetailsRechercheContainer extends Component {
     constructor (props) {
@@ -31,14 +32,13 @@ class DetailsRechercheContainer extends Component {
                 },
                 body: JSON.stringify({
                     playlist_id: playlistId,
+                    title: dataTitle,
                     uri: dataUri,
                     master_id: masterId
                 })
             }).then(response => response.json())
                 .then((result) => {
-                    alert(JSON.stringify(result))
                     if (Object.prototype.hasOwnProperty.call(result, 'operation')) {
-                        alert(result.operation)
                         if (result.operation === '200') {
                             alert('Track ajouter a la playList')
                         } else {
@@ -54,26 +54,25 @@ class DetailsRechercheContainer extends Component {
     }
 
     componentDidMount () {
-        const albumDetails = 'http://localhost:8080/recherches/' + this.props.masterId
-        fetch(albumDetails, { method: 'GET' })
-            .then(response => response.json())
-            .then(responseJson => {
-                const tracklists = responseJson.tracklist
-                const videos = responseJson.videos
-                const videosLength = videos.length
+        const DiscogsMusic = new Discogs('pQzAZbFqlwSWOJDgKaUysMarTUaZmCEcuJmbqCZA')
 
-                const newTracklistsObject = []
-                tracklists.map((trackItem, index) => {
-                    if ((index + 1) <= videosLength) {
-                        newTracklistsObject.push({ track: trackItem.title, uri: videos[index].uri })
-                    } else {
-                        newTracklistsObject.push({ track: trackItem.title, uri: 'null' })
-                    }
-                })
+        DiscogsMusic.getMaster(this.props.masterId, (data) => {
+            const tracklists = data.tracklist
+            const videos = data.videos
+            const videosLength = videos.length
 
-                // const tracklists = responseJson.tracklist
-                this.setState({ tracklistsObject: newTracklistsObject, images: responseJson.images, genres: responseJson.genres, year: responseJson.year, title: responseJson.title })
+            const newTracklistsObject = []
+            tracklists.map((trackItem, index) => {
+                if ((index + 1) <= videosLength) {
+                    newTracklistsObject.push({ track: trackItem.title, uri: videos[index].uri })
+                } else {
+                    newTracklistsObject.push({ track: trackItem.title, uri: 'null' })
+                }
             })
+
+            // const tracklists = responseJson.tracklist
+            this.setState({ tracklistsObject: newTracklistsObject, images: data.images, genres: data.genres, year: data.year, title: data.title })
+        })
     }
 
     render () {
@@ -81,7 +80,6 @@ class DetailsRechercheContainer extends Component {
             <div>
 
                 <DetailsRechercheComponent tracklists={this.state.tracklistsObject} masterIdToCoponent={this.props.masterId} />
-                <DetailsAlbumRechercheComponent imageAlbum={(this.state.images.length > 0 ? this.state.images[0] : '')} genreAlbum={(this.state.genres.length > 0 ? this.state.genres[0] : 'Inconnu')} yearAlbum={this.state.year} titleAlbum={this.state.title} />
 
                 <DetailsAlbumRechercheComponent imageAlbum={(this.state.images.length > 0 ? this.state.images[0].uri : '')} genreAlbum={(this.state.genres.length > 0 ? this.state.genres[0] : 'Inconnu')} yearAlbum={this.state.year} titleAlbum={this.state.title} />
                 {this.state.tracklistsObject.map((item, index) => <DetailsRechercheComponent title={item.track} masterId={this.props.masterId} youtubeUri={item.uri} key={index} onClick={this.handleSaveTrackToPlayList} />)}

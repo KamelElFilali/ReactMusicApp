@@ -8,7 +8,6 @@ const DetailsAlbumRechercheComponent = ({ imageAlbum, genreAlbum, yearAlbum, tit
             <p class='card-text'>{titleAlbum}</p>
             <p class='card-text'>{yearAlbum}</p>
             <p class='card-text'>{genreAlbum}</p>
-            <button type='button' class='btn btn-primary'>Jouer l'album</button>
         </div>
     </div>
 )
