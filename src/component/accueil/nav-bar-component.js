@@ -1,9 +1,4 @@
 import React from 'react'
-
-function optionRender (genre, index) {
-    return <option value={index} key={index}>{genre.type}</option>
-}
-
 function renderLi (buttons, index) {
     return (
         <li class='nav-item active' key={index}>
@@ -11,6 +6,10 @@ function renderLi (buttons, index) {
         </li>
     )
 }
+function optionRender (genre, index) {
+    return <option value={index} key={index}>{genre.type}</option>
+}
+
 const NavBarComponent = ({ onSubmit, genres, buttons }) => (
 
     <div className=''>
