@@ -11,12 +11,27 @@ class ResultatRechercheContainer extends Component {
     }
 
     componentDidMount () {
+<<<<<<< HEAD
+        const DiscogsMusic = new Discogs('pQzAZbFqlwSWOJDgKaUysMarTUaZmCEcuJmbqCZA')
+        if (this.props.rechercheValeur !== '') {
+            DiscogsMusic.search(this.props.rechercheValeur, (data) => {
+                if (data.results.length > 0) {
+                    this.setState({ result: data.results })
+                } else {
+                    alert('Aucun resultat ne correspond a votre recherche')
+                }
+            })
+        } else {
+            alert('Champ de recherche vide')
+        }
+=======
         fetch('http://localhost:8080/recherches', { method: 'GET' })
             .then(response => response.json())
             .then(responseJson => {
                 const result = responseJson.results
                 this.setState({ result: result })
             })
+>>>>>>> 9227eb8f204552a6523e2b6d0d51ca3d091bed5e
     }
 
     render () {

@@ -38,7 +38,10 @@ class DetailsRechercheContainer extends Component {
 
         if (playlistId !== '-1') {
             fetch('/playlists/ajout', {
+<<<<<<< HEAD
+=======
 
+>>>>>>> 9227eb8f204552a6523e2b6d0d51ca3d091bed5e
                 method: 'POST',
 
                 headers: {
@@ -106,8 +109,11 @@ class DetailsRechercheContainer extends Component {
     render () {
         return (
 
+<<<<<<< HEAD
+=======
             <div id='divContainerDetail' className='container'>
 
+>>>>>>> 9227eb8f204552a6523e2b6d0d51ca3d091bed5e
                 <DetailsAlbumRechercheComponent imageAlbum={(this.state.images.length > 0 ? this.state.images[0].uri : '')} genreAlbum={(this.state.genres.length > 0 ? this.state.genres[0] : 'Inconnu')} yearAlbum={this.state.year} titleAlbum={this.state.title} />
                 <div id='divColonneTrack'>
                     {this.state.tracklistsObject.map((item, index) => <DetailsRechercheComponent title={item.track} masterId={this.props.masterId} youtubeUri={item.uri} key={index} onClick={this.handleSaveTrackToPlayList} />)}

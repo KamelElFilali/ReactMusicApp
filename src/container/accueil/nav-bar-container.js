@@ -42,7 +42,7 @@ class NavBarContainer extends Component {
     // didmont
 
     componentDidMount () {
-        fetch('http://localhost:8080/playlists/genres', { method: 'GET' })
+        fetch('/playlists/genres', { method: 'GET' })
             .then(response => response.json())
             .then(responseJson => {
                 this.setState({ genres: responseJson })
