@@ -6,13 +6,26 @@ class PlayVideoContainer extends Component {
         super(props)
 
         this.state = {
-
+            youtubeUriTracks: []
         }
+    }
+
+    componentDidMount () {
+        const tracks = this.props.handleTackArray
+        const newTracksArray = []
+        tracks.map(item => {
+            newTracksArray.push({
+                uri: item.uri,
+                title: item.title
+            })
+        })
+
+        this.setState({ youtubeUriTracks: newTracksArray })
     }
 
     render () {
         return (
-            <PlayList track={this.props.trackArray} />
+            <PlayList tracks={this.state.youtubeUriTracks} />
         )
     }
 }
