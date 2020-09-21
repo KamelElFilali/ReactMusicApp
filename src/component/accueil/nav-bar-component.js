@@ -7,7 +7,7 @@ function renderLi (buttons, index) {
     )
 }
 function optionRender (genre, index) {
-    return <option value={index} key={index}>{genre.type}</option>
+    return <option value={genre.id} key={index}>{genre.title}</option>
 }
 
 const NavBarComponent = ({ onSubmit, genres, buttons }) => (

@@ -14,7 +14,13 @@ class ResultatRechercheContainer extends Component {
     componentDidMount () {
         const DiscogsMusic = new Discogs('pQzAZbFqlwSWOJDgKaUysMarTUaZmCEcuJmbqCZA')
         if (this.props.rechercheValeur !== '') {
-            DiscogsMusic.search(this.props.rechercheValeur, (data) => { this.setState({ result: data.results }) })
+            DiscogsMusic.search(this.props.rechercheValeur, (data) => {
+                if (data.results.length > 0) {
+                    this.setState({ result: data.results })
+                } else {
+                    alert('Aucun resultat ne correspond a votre recherche')
+                }
+            })
         } else {
             alert('Champ de recherche vide')
         }

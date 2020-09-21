@@ -25,7 +25,7 @@ class DetailsRechercheContainer extends Component {
         const dataTitle = event.target.getAttribute('data-title')
 
         if (playlistId !== '-1') {
-            fetch('http://localhost:8080/playlists/ajout', {
+            fetch('/playlists/ajout', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -78,8 +78,6 @@ class DetailsRechercheContainer extends Component {
     render () {
         return (
             <div>
-
-                <DetailsRechercheComponent tracklists={this.state.tracklistsObject} masterIdToCoponent={this.props.masterId} />
 
                 <DetailsAlbumRechercheComponent imageAlbum={(this.state.images.length > 0 ? this.state.images[0].uri : '')} genreAlbum={(this.state.genres.length > 0 ? this.state.genres[0] : 'Inconnu')} yearAlbum={this.state.year} titleAlbum={this.state.title} />
                 {this.state.tracklistsObject.map((item, index) => <DetailsRechercheComponent title={item.track} masterId={this.props.masterId} youtubeUri={item.uri} key={index} onClick={this.handleSaveTrackToPlayList} />)}

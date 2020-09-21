@@ -22,7 +22,7 @@ class PlayListContainer extends Component {
     }
 
     componentDidMount () {
-        const URL = 'http://localhost:8080/playlists/tracks/' + this.props.playlistId
+        const URL = '/playlists/tracks/' + this.props.playlistId
         fetch(URL, { method: 'GET' })
             .then(response => response.json())
             .then(responseJson => {
