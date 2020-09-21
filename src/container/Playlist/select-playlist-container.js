@@ -12,12 +12,15 @@ class SelectPlayListContainer extends Component {
     }
 
     render () {
-        return (
-            <div>
-                {/* <SelectPlayListComponent /> */}
-                {this.props.trackArray.map((item, index) => <SelectPlayListComponent onClick={this.props.onHandlePlayClick} key={index} titleTrack={item.title} uriYoutube={item.uri} />)}
-            </div>
-        )
+        if (typeof this.props.handleTackArray !== 'undefined') {
+            return (
+                <div>
+                    {this.props.handleTackArray.map((item, index) => <SelectPlayListComponent onClick={this.props.onHandlePlayClick} key={index} titleTrack={item.title} uriYoutube={item.uri} />)}
+                </div>
+            )
+        } else {
+            return <div />
+        }
     }
 }
 
