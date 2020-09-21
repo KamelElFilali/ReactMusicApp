@@ -81,8 +81,8 @@ class App extends Component { // composant container qui est le formualaire 'Con
             break
         case 'playlist':
             nextContainer = <PlayListContainer playlistId={this.state.playlistId} />
-listId={this.state.playlistId} />
-       }
+// listId={this.state.playlistId} />
+        }
 
         return (
             <div>
