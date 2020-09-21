@@ -14,7 +14,7 @@ class SelectPlayListContainer extends Component {
     render () {
         if (typeof this.props.handleTackArray !== 'undefined') {
             return (
-                <div id='divContainerComponentPlaylist'>
+                <div>
                     {this.props.handleTackArray.map((item, index) => <SelectPlayListComponent onClick={this.props.onHandlePlayClick} key={index} titleTrack={item.title} uriYoutube={item.uri} />)}
                 </div>
             )

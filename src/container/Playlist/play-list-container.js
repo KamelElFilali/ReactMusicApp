@@ -33,10 +33,10 @@ class PlayListContainer extends Component {
     render () {
         return (
             <div id='divContainerAllPlaylist'>
-                <SelectPlayListContainer playlistId={this.props.playlistId} onHandlePlayClick={this.handlePlayClick} handleTackArray={this.state.trackArray} />
-                <div>
-                    {(this.state.displayYoutubeFrame === true) ? <PlayVideoContainer handleTackArray={this.state.trackArray} /> : ''}
+                <div id='divContainerComponentPlaylist'>
+                    <SelectPlayListContainer playlistId={this.props.playlistId} onHandlePlayClick={this.handlePlayClick} handleTackArray={this.state.trackArray} />
                 </div>
+                {(this.state.displayYoutubeFrame === true) ? <PlayVideoContainer handleTackArray={this.state.trackArray} /> : ''}
 
             </div>
         )
