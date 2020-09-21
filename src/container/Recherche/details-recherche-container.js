@@ -77,7 +77,7 @@ class DetailsRechercheContainer extends Component {
 
     render () {
         return (
-            <div>
+            <div id='divContainerDetail' className='container'>
 
                 <DetailsRechercheComponent tracklists={this.state.tracklistsObject} masterIdToCoponent={this.props.masterId} />
 

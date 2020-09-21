@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 import ResultatRechercheComponent from '../../component/recherche/resultat-recherche-component'
-import Discogs from '../../service/discogs'
 
 class ResultatRechercheContainer extends Component {
     constructor (props) {
@@ -12,12 +11,12 @@ class ResultatRechercheContainer extends Component {
     }
 
     componentDidMount () {
-        const DiscogsMusic = new Discogs('pQzAZbFqlwSWOJDgKaUysMarTUaZmCEcuJmbqCZA')
-        if (this.props.rechercheValeur !== '') {
-            DiscogsMusic.search(this.props.rechercheValeur, (data) => { this.setState({ result: data.results }) })
-        } else {
-            alert('Champ de recherche vide')
-        }
+        fetch('http://localhost:8080/recherches', { method: 'GET' })
+            .then(response => response.json())
+            .then(responseJson => {
+                const result = responseJson.results
+                this.setState({ result: result })
+            })
     }
 
     render () {

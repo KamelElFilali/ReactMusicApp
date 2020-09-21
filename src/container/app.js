@@ -11,7 +11,8 @@ import PlayListContainer from './playlist/play-list-container'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import ResultatRechercheContainer from '../container/Recherche/resultat-recherche-container'
+// import DetailsRechercheContainer from '../container/recherche/details-recherche-container'
+import DetailsRechercheComponement from '../component/recherche/details-recherche-component'
 
 class App extends Component { // composant container qui est le formualaire 'Contenant'
     constructor (props) {
@@ -74,7 +75,7 @@ class App extends Component { // composant container qui est le formualaire 'Con
 
         switch (this.state.container) {
         case 'accueil':
-            nextContainer = <AccueilContainer />
+            nextContainer = <DetailsRechercheComponement />
             break
         case 'recherche':
             nextContainer = <RechercheContainer rechercheValeur={this.state.rechercheValeur} />
