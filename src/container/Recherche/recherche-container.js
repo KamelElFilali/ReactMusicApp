@@ -18,7 +18,7 @@ class RechercheContainer extends Component {
     }
 
     handleEachAlbumClick (event) {
-        const masterIdClicked = event.target.getAttribute('data-key')
+        const masterIdClicked = document.getElementById('select_each_album').getAttribute('data-key')
         this.setState({ pageRecherche: 'resultatDetails', masterId: masterIdClicked })
     }
 
@@ -26,7 +26,7 @@ class RechercheContainer extends Component {
         let nextRechercheContainer = ''
         switch (this.state.pageRecherche) {
         case 'resultat':
-            nextRechercheContainer = <ResultatRechercheContainer onHandleEachAlbumClick={this.handleEachAlbumClick} />
+            nextRechercheContainer = <ResultatRechercheContainer onHandleEachAlbumClick={this.handleEachAlbumClick} rechercheValeur={this.props.rechercheValeur} />
             break
         case 'resultatDetails':
             nextRechercheContainer = <DetailsRechercheContainer masterId={this.state.masterId} />

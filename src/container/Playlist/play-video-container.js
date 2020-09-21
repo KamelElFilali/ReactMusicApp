@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-
-import PlayVideoComponent from '../../component/playlist/play-video-component'
+import PlayList from '../../service/Playlist'
 
 class PlayVideoContainer extends Component {
     constructor (props) {
@@ -13,7 +12,7 @@ class PlayVideoContainer extends Component {
 
     render () {
         return (
-            <div />
+            <PlayList track={this.props.trackArray} />
         )
     }
 }
