@@ -26,7 +26,7 @@ class RechercheContainer extends Component {
         let nextRechercheContainer = ''
         switch (this.state.pageRecherche) {
         case 'resultat':
-            nextRechercheContainer = <ResultatRechercheContainer onHandleEachAlbumClick={this.handleEachAlbumClick} rechercheValeur={this.props.rechercheValeur} />
+            nextRechercheContainer = <ResultatRechercheContainer onHandleEachAlbumClick={this.handleEachAlbumClick} result={this.props.result} />
             break
         case 'resultatDetails':
             nextRechercheContainer = <DetailsRechercheContainer masterId={this.state.masterId} />

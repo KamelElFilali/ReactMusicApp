@@ -11,6 +11,8 @@ import PlayListContainer from './playlist/play-list-container'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+import Discogs from '../service/discogs'
+
 import ResultatRechercheContainer from '../container/Recherche/resultat-recherche-container'
 
 class App extends Component { // composant container qui est le formualaire 'Contenant'
@@ -19,8 +21,8 @@ class App extends Component { // composant container qui est le formualaire 'Con
 
         this.state = {
             container: 'accueil',
-            rechercheValeur: '',
-            playlistId: ''
+            playlistId: '',
+            result: []
         }
 
         this.handleRechercheOnClick = this.handleRechercheOnClick.bind(this)
@@ -34,7 +36,18 @@ class App extends Component { // composant container qui est le formualaire 'Con
     handleRechercheOnClick (event) {
         event.preventDefault()
         const rechercheInput = document.getElementById('barreRecherche').value
-        this.setState({ container: 'recherche', rechercheValeur: rechercheInput })
+        const DiscogsMusic = new Discogs('pQzAZbFqlwSWOJDgKaUysMarTUaZmCEcuJmbqCZA')
+        if (rechercheInput !== '') {
+            DiscogsMusic.search(rechercheInput, (data) => {
+                if (data.results.length > 0) {
+                    this.setState({ container: 'recherche', result: data.results })
+                } else {
+                    alert('Aucun resultat ne correspond a votre recherche')
+                }
+            })
+        } else {
+            alert('Champ de recherche vide')
+        }
     }
 
     handleAccueilOnClick () {
@@ -59,7 +72,7 @@ class App extends Component { // composant container qui est le formualaire 'Con
             this.state.playlistId = document.getElementById('inputGroupSelect04').value
             const playListId = document.getElementById('inputGroupSelect04').value
             if (playListId !== '-1') {
-                this.setState({ container: 'playlist', rechercheValeur: '', playlistId: document.getElementById('inputGroupSelect04').value })
+                this.setState({ container: 'playlist', result: [], playlistId: document.getElementById('inputGroupSelect04').value })
             } else {
                 alert('Veuillez choisir une playlist pour afficher son contenu')
             }
@@ -77,7 +90,7 @@ class App extends Component { // composant container qui est le formualaire 'Con
             nextContainer = <AccueilContainer />
             break
         case 'recherche':
-            nextContainer = <RechercheContainer rechercheValeur={this.state.rechercheValeur} />
+            nextContainer = <RechercheContainer result={this.state.result} />
             break
         case 'playlist':
             nextContainer = <PlayListContainer playlistId={this.state.playlistId} />
