@@ -18,53 +18,67 @@
     -moz-animation: fill 1s forwards;
 }
 
-#divContainerAllPlaylist {}
+#divContainerAllPlaylist {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+}
 
-#divContainerComponentPlaylist {
+#divContainerComponentPlayliste {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 180px;
     /* flex-wrap: wrap; */
 }
 
-.swiper-container {
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+#divContainerVideoYoutube {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 320px;
-    background-color: #fff;
-    overflow: hidden;
-    border-radius: 8px;
+#cardPlaylist {}
+
+#imgLogoCardPlaylist {
+    width: 250px;
+    height: 250px;
+    margin: auto;
 }
 
-.picture {
-    width: 320px;
-    height: 320px;
-    overflow: hidden;
-    img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+#containerYoutubeAndButton {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
 }
 
-.detail {
-    padding: 25px 20px;
-    font-weight: 600;
-    text-align: center;
-    h3 {
-        margin: 0;
-        font-size: 20px;
-    }
-    span {
-        display: block;
-        font-size: 16px;
-        color: #f44336;
-    }
+.playlist {
+    margin-top: 100px;
+}
+
+#containerNavigationAndTitre {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#titreCardVideoYoutube {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#divNavigation {}
+
+.buttonNavigation {
+    width: 80px;
+    height: 40px;
+}
+
+#listeTitrePlaylist {
+    font-size: 2em;
+    color: black;
+    font-weight: bold;
 }

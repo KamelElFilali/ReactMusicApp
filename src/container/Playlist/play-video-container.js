@@ -25,7 +25,9 @@ class PlayVideoContainer extends Component {
 
     render () {
         return (
-            <PlayList tracks={this.state.youtubeUriTracks} />
+            <div id='divContainerVideoYoutube'>
+                <PlayList tracks={this.state.youtubeUriTracks} />
+            </div>
         )
     }
 }

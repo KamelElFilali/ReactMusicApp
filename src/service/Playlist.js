@@ -79,23 +79,23 @@ class Playlist extends Component {
         return (
             <div className='playlist'>
                 <div className='row'>
-                    <div className='col'>
-                        <div className='card'>
-                            <YouTube
+                    <div id="divPrincipalYoutubeAndButton"  className='col'>
+                        <div id="containerYoutubeAndButton" className='card'>
+                            <YouTube id="youtubevideo"
                                 videoId={this.getVideoId()}
                                 opts={this.state.options}
                                 onEnd={this.onEndHandler}
                             />
-                            <div className='card-body'>
-                                <h5 className='card-title'>{this.props.tracks[this.state.index] && this.props.tracks[this.state.index].title}</h5>
-                                <div>
-                                    <button onClick={this.previousOnClickHandler}><i className='fas fa-step-backward' /></button>
-                                    <button onClick={this.nextOnClickHandler}><i className='fas fa-step-forward' /></button>
+                            <div id="containerNavigationAndTitre" className='card-body'>
+                                <h5 id="titreCardVideoYoutube" className='card-title'>{this.props.tracks[this.state.index] && this.props.tracks[this.state.index].title}</h5>
+                                <div id="divNavigation">
+                                    <button class="buttonNavigation" onClick={this.previousOnClickHandler}><i className='fas fa-step-backward' /></button>
+                                    <button  class="buttonNavigation" onClick={this.nextOnClickHandler}><i className='fas fa-step-forward' /></button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className='col'>
+                    <div id="listeTitrePlaylist" className='col'>
                         <ul className='list-group'>
                             {this.props.tracks.map((track, index) => <li key={index} onClick={() => this.onClickHandler(index)} className={index === this.state.index ? 'list-group-item list-group-item-dark' : 'list-group-item'}>{track.title}</li>)}
                         </ul>
