@@ -22,7 +22,7 @@ class AccueilContainer extends Component {
 
     render () {
         const BUTTONS = [{
-            label: 'Acceuil',
+            label: 'Acceuil ',
             onClick: this.hadelOnclick
         }, {
             label: 'Musiques',
