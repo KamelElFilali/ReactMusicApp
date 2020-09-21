@@ -53,7 +53,7 @@
     transition: 0.2s;
 }
 
-#boutonDetailRecherche {
+#select_each_album {
     font-size: 2rem;
     /* margin-top: 20px; */
     background-color: black;
@@ -96,13 +96,20 @@ hr {
 /* ***************************** DETAIL ALBUM RECHERCHE ************************************************ */
 
 #carDetailAlbum {
-    width: 40%;
-    height: 440px;
+    width: 60%;
+    height: 500px;
 }
 
 /* ***************************** FIN DETAIL ALBUM RECHERCHE************************************************ */
 
 /* ***************************** DETAIL TRACK RECHERCHE ************************************************ */
+
+#divColonneTrack {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 100px;
+}
 
 #divContainerDetail {
     margin-top: 160px;
@@ -120,7 +127,7 @@ hr {
     padding: 4px;
     padding-right: 8px;
     padding-bottom: 0px;
-    width: 50%;
+    width: 115%;
     height: 100%;
     box-shadow: 20px 9px 10px 0px rgba(0, 0, 0, 0.6);
     transition: all 0.3s;
@@ -131,7 +138,7 @@ hr {
 }
 
 #divPrincipalDetail:hover {
-    width: 50.5%;
+    width: 116%;
     transition: all 0.3s;
 }
 
