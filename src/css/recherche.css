@@ -34,7 +34,9 @@
     background-color: white;
     color: black;
     font-weight: bold;
-    /* height: 150px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card {
@@ -51,7 +53,7 @@
     transition: 0.2s;
 }
 
-#boutonDetailRecherche {
+#select_each_album {
     font-size: 2rem;
     /* margin-top: 20px; */
     background-color: black;
@@ -90,3 +92,83 @@ hr {
 }
 
 /* ***************************** FIN RESULTAT RECHERCHE ************************************************ */
+
+/* ***************************** DETAIL ALBUM RECHERCHE ************************************************ */
+
+#carDetailAlbum {
+    width: 60%;
+    height: 500px;
+}
+
+/* ***************************** FIN DETAIL ALBUM RECHERCHE************************************************ */
+
+/* ***************************** DETAIL TRACK RECHERCHE ************************************************ */
+
+#divColonneTrack {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 100px;
+}
+
+#divContainerDetail {
+    margin-top: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#divPrincipalDetail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    font-size: 2rem;
+    padding: 4px;
+    padding-right: 8px;
+    padding-bottom: 0px;
+    width: 115%;
+    height: 100%;
+    box-shadow: 20px 9px 10px 0px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s;
+}
+
+#divPrincipalDetail:hover {
+    box-shadow: 14px 14px 10px 4px rgba(0, 0, 0, 0.6);
+}
+
+#divPrincipalDetail:hover {
+    width: 116%;
+    transition: all 0.3s;
+}
+
+#divPrincipalDetail:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+}
+
+#textTitreTrack {
+    color: black;
+    font-weight: bold;
+}
+
+#divIconeAjoutPlaylist {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    float: right;
+}
+
+#iconeAjoutPlaylist {
+    width: 30px;
+    height: 30px;
+}
+
+#textAjout {
+    color: black;
+    font-weight: bold;
+}
+
+/* ***************************** FIN DETAIL TRACK RECHERCHE************************************************ */

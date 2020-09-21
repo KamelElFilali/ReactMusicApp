@@ -1,13 +1,13 @@
 import React from 'react'
 
 const DetailsAlbumRechercheComponent = ({ imageAlbum, genreAlbum, yearAlbum, titleAlbum }) => (
-    <div className='container'>
-        <h1>Ajouter les musiques a votre Playlist</h1>
+    <div id='carDetailAlbum' className='card'>
+        {/* <h1>Ajouter les musiques a votre Playlist</h1> */}
         <img class='card-img-top' src={imageAlbum} alt='Card image cap' />
         <div class='card-body'>
-            <p class='card-text'>{titleAlbum}</p>
-            <p class='card-text'>{yearAlbum}</p>
-            <p class='card-text'>{genreAlbum}</p>
+            <h3 class='card-text'>{titleAlbum}</h3>
+            <span class='card-text'>{yearAlbum}</span>
+            <span class='card-text'>{genreAlbum}</span>
         </div>
     </div>
 )

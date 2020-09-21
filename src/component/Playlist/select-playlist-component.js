@@ -1,23 +1,31 @@
 import React from 'react'
 
 const SelectPlayListComponent = ({ onClick, titleTrack, uriYoutube, index }) => (
-    <div class='divContainerCardPlayList'>
+    <div id='divContainerCardPlayList' className='container'>
 
-        <div class='swiper-container' onClick={onClick} key={index}>
+        {/* <div className='swiper-container' onClick={onClick} key={index}>
 
-            <div class='swiper-wrapper'>
+            <div className='swiper-wrapper'>
 
-                <div class='swiper-slide'>
-                    <div class='picture'>
+                <div className='swiper-slide'>
+                    <div className='picture'>
                         <img src={uriYoutube.uri} alt='video youtube tracks' />
 
                     </div>
-                    <div class='detail'>
+                    <div className='detail'>
                         <h3 id='titreTrackCardPlayList'>{titleTrack}</h3>
 
                     </div>
                 </div>
 
+            </div>
+
+        </div> */}
+
+        <div className='card' onClick={onClick} key={index}>
+            <img className='card-img-top' src={uriYoutube.uri} alt='video youtube tracks' />
+            <div className='card-body'>
+                <h3 className='card-text'>{titleTrack}</h3>
             </div>
         </div>
     </div>
