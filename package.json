@@ -42,7 +42,7 @@
         "bootstrap-show-password": "^1.2.1",
         "bootstrap-switch-button-react": "^1.2.0",
         "disconnect": "^1.2.1",
-        "express": "^4.17.1",
+        "express": "^4.17.3",
         "framer-motion": "^2.6.10",
         "pg": "^8.3.3",
         "react": "^16.13.1",
